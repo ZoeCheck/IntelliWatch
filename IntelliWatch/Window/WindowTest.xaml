@@ -1,0 +1,31 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="IntelliWatch.WindowTest"
+	x:Name="Window"
+	Title="WindowTest"
+	Width="640" Height="480" WindowStartupLocation="CenterScreen" Background="{DynamicResource BrushMainWindow}">
+
+	<Grid x:Name="LayoutRoot">
+		<TreeView Margin="261,45,160.667,87" Style="{DynamicResource TreeViewStyleMain}" Background="{x:Null}" BorderBrush="#FF88AAAF">
+			<TreeViewItem Header="新北区" IsExpanded="True" Style="{DynamicResource TreeViewItemStyleMain}" Foreground="White">
+				<TreeViewItem Header="长江路" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="黄河西路" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="武汉长沙路" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="局前街" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="北京附属一中" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="环太平洋南路北景区" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="北直街" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="人民中路" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="景林西路" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+			</TreeViewItem>
+			<TreeViewItem Header="钟楼区" Style="{DynamicResource TreeViewItemStyleMain}" IsExpanded="True" Foreground="White">
+				<TreeViewItem Header="区政府" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+				<TreeViewItem Header="火车站" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+			</TreeViewItem>
+			<TreeViewItem Header="武进区" Style="{DynamicResource TreeViewItemStyleMain}" IsExpanded="True" Foreground="White">
+				<TreeViewItem Header="中吴大道" Style="{DynamicResource TreeViewItemStyleSecond}" Margin="0,2" Foreground="White"/>
+			</TreeViewItem>
+		</TreeView>
+	</Grid>
+</Window>
