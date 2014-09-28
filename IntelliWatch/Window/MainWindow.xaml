@@ -14,7 +14,9 @@
     						</Grid>
     					</TabItem>
     					<TabItem Header="特殊地区" Width="90" Margin="-15.077,-2,15.076,-1" Style="{DynamicResource TabItemStyleSecondLevel2}">
-    						<Grid Background="#FF3FD616"/>
+    						<Grid Background="#FF3FD616">
+    							<local:UCDatePicker HorizontalAlignment="Left" Margin="87.496,126.931,0,195" Width="344"/>
+    						</Grid>
     					</TabItem>
     					<TabItem Header="十字路口" Width="90" Margin="-32.215,-2,32.214,-1" Style="{DynamicResource TabItemStyleSecondLevel2}">
     						<Grid Background="#FF07894B"/>

@@ -58,6 +58,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DateModel.cs" />
+    <Compile Include="DayModel.cs" />
+    <Compile Include="DayStruct.cs" />
+    <Compile Include="UserControl\UCDatePicker.xaml.cs">
+      <DependentUpon>UCDatePicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCRT1.xaml.cs">
       <DependentUpon>UCRT1.xaml</DependentUpon>
     </Compile>
@@ -65,6 +71,10 @@
       <DependentUpon>WindowTest.xaml</DependentUpon>
     </Compile>
     <Page Include="Style\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Style\RadioButtonStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -77,6 +87,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\TreevViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCDatePicker.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
