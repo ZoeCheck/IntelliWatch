@@ -20,12 +20,45 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type RadioButton}">
-					<Border BorderBrush="#00000000" BorderThickness="1">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
 						<Grid>
 							<ContentPresenter Margin="0" RecognizesAccessKey="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							<Ellipse x:Name="ellipse" Fill="{x:Null}" Margin="1.341,0.43,1.885,-1.258" StrokeThickness="1" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Stroke="Red">
+								<Ellipse.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform Angle="-24.656"/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Ellipse.RenderTransform>
+							</Ellipse>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Visibility" TargetName="ellipse" Value="Visible"/>
+						</Trigger>
 						<Trigger Property="HasContent" Value="true">
 							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
 							<Setter Property="Padding" Value="4,0,0,0"/>

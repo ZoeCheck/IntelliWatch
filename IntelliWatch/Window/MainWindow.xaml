@@ -7,7 +7,7 @@
     	<TabControl x:Name="tbcMain" Margin="0,0,10,10" TabStripPlacement="Left" Style="{DynamicResource TabControlStyleTopLevel}" BorderThickness="0" Padding="2" Background="White">
     		<TabItem Header="所有视频" Style="{DynamicResource TabItemStyleTopLevel1}" Width="60" Height="60" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
     			<Grid Margin="0">
-    				<TabControl Margin="-6.496,-27,-7.042,0" Background="{x:Null}" BorderBrush="{x:Null}">
+    				<TabControl Margin="-6.496,-27,-6.011,0" Background="{x:Null}" BorderBrush="{x:Null}">
     					<TabItem Header="全景视频" Style="{DynamicResource TabItemStyleSecondLevel}" Width="90" Margin="0.672,-2,-0.673,-1">
     						<Grid>
     							<local:UCRT1 Margin="0" d:LayoutOverrides="Height"/>

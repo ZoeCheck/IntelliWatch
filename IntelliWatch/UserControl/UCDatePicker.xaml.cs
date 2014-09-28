@@ -10,55 +10,111 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace IntelliWatch
 {
 	/// <summary>
 	/// UCDatePicker.xaml 的交互逻辑
 	/// </summary>
-	public partial class UCDatePicker : UserControl
+	public partial class UCDatePicker : UserControl, INotifyPropertyChanged
 	{
-		public int year { get; set; }
-		public int month { get; set; }
+
 		DateModel dm = new DateModel();
+
+		private int _Year;
+
+		public int Year
+		{
+			get { return _Year; }
+			set
+			{
+				_Year = value;
+				RaisePropertyChanged("Year");
+			}
+		}
+
+		private int _Month;
+
+		public int Month
+		{
+			get { return _Month; }
+			set
+			{
+				if (value > 12)
+				{
+					value = 12;
+				}
+				if (value < 1)
+				{
+					value = 1;
+				}
+				_Month = value;
+				RaisePropertyChanged("Month");
+			}
+		}
+
+		public int Day { get; set; }
+
+
+
+		public string SelectDate
+		{
+			get { return (string)GetValue(SelectDateProperty); }
+			set { SetValue(SelectDateProperty, value); }
+		}
+
+		// Using a DependencyProperty as the backing store for SelectDate.  This enables animation, styling, binding, etc...
+		public static readonly DependencyProperty SelectDateProperty =
+			DependencyProperty.Register("SelectDate", typeof(string), typeof(UCDatePicker), new UIPropertyMetadata(""));
+
+
 
 		public UCDatePicker()
 		{
 			this.InitializeComponent();
+			this.DataContext = this;
+			SelectDate = DateTime.Now.ToString("yyyy-MM-dd");
 		}
 
 		private void UserControl_Loaded(object sender, RoutedEventArgs e)
 		{
-			year = 2014;
-			month = 9;
-			dm.SetDayModel(year, month);
+			Year = DateTime.Now.Year;
+			Month = DateTime.Now.Month;
+			dm.SetDayModel(Year, Month);
 			SetControlShow();
-			cmbYear.SelectionChanged +=new SelectionChangedEventHandler(cmbYear_SelectionChanged);
-			cmbMonth.SelectionChanged +=new SelectionChangedEventHandler(cmbMonth_SelectionChanged);
-		}
-
-		private void cmbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			if (e.AddedItems != null)
+			InitRadioButtonCheckedEvent();
+			string dayNow = DateTime.Now.Day.ToString();
+			//设置选中的radiobutton
+			foreach (var item in GridRadio.Children)
 			{
-				ComboBoxItem cbi = ((object[])(e.AddedItems))[0] as ComboBoxItem;
-				year = Convert.ToInt32(cbi.Content);
-
-				dm.SetDayModel(year, month);
-				SetControlShow();
+				if (item.GetType() == typeof(RadioButton))
+				{
+					RadioButton rbt = (RadioButton)item;
+					if (rbt.Content.ToString().Equals(dayNow))
+					{
+						rbt.IsChecked = true;
+					}
+				}
 			}
 		}
 
-		private void cmbMonth_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void InitRadioButtonCheckedEvent()
 		{
-			if (e.AddedItems != null)
+			foreach (var item in GridRadio.Children)
 			{
-				ComboBoxItem cbi = ((object[])(e.AddedItems))[0] as ComboBoxItem;
-				month = Convert.ToInt32(cbi.Content);
-
-				dm.SetDayModel(year, month);
-				SetControlShow();
+				if (item.GetType() == typeof(RadioButton))
+				{
+					RadioButton rbt = (RadioButton)item;
+					rbt.Checked += rbt_Checked;
+				}
 			}
+		}
+
+		void rbt_Checked(object sender, RoutedEventArgs e)
+		{
+			Day = Convert.ToInt32(((RadioButton)sender).Content);
+			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
 		private void SetControlShow()
@@ -82,7 +138,7 @@ namespace IntelliWatch
 			r17.Content = dm.dayModelList[16].Day;
 			r18.Content = dm.dayModelList[17].Day;
 			r19.Content = dm.dayModelList[18].Day;
-			r20.Content = dm.dayModelList[18].Day;
+			r20.Content = dm.dayModelList[19].Day;
 			r21.Content = dm.dayModelList[20].Day;
 			r22.Content = dm.dayModelList[21].Day;
 			r23.Content = dm.dayModelList[22].Day;
@@ -105,6 +161,68 @@ namespace IntelliWatch
 			r40.Content = dm.dayModelList[39].Day;
 			r41.Content = dm.dayModelList[40].Day;
 			r42.Content = dm.dayModelList[41].Day;
+
+			CheckSelected();
+		}
+
+		private void btnPreviewYear_Click(object sender, RoutedEventArgs e)
+		{
+			Year--;
+			dm.SetDayModel(Year, Month);
+			SetControlShow();
+			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
+		}
+
+		private void btnNextYear_Click(object sender, RoutedEventArgs e)
+		{
+			Year++;
+			dm.SetDayModel(Year, Month);
+			SetControlShow();
+			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
+		}
+
+		private void btnPreviewMonth_Click(object sender, RoutedEventArgs e)
+		{
+			Month--;
+			dm.SetDayModel(Year, Month);
+			SetControlShow();
+			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
+		}
+
+		private void btnNextMonth_Click(object sender, RoutedEventArgs e)
+		{
+			Month++;
+			dm.SetDayModel(Year, Month);
+			SetControlShow();
+			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		public void RaisePropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		private void CheckSelected()
+		{
+			foreach (var item in GridRadio.Children)
+			{
+				if (item.GetType() == typeof(RadioButton))
+				{
+					if (((RadioButton)item).IsChecked == true)
+					{
+						RadioButton rbt = (RadioButton)item;
+						if (rbt.Content == "")
+						{
+							rbt.IsChecked = false;
+						}
+					}
+				}
+			}
 		}
 	}
 }
