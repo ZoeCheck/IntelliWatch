@@ -67,6 +67,9 @@
     <Compile Include="UserControl\UCRT1.xaml.cs">
       <DependentUpon>UCRT1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UCTractBar.xaml.cs">
+      <DependentUpon>UCTractBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window\WindowTest.xaml.cs">
       <DependentUpon>WindowTest.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Style\TractBarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Style\TreevViewStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,6 +102,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControl\UCRT1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCTractBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

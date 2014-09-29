@@ -11,6 +11,7 @@
     			<ResourceDictionary Source="Style/TextBoxStyleSearch.xaml"/>
                 <ResourceDictionary Source="Style/ButtonStyle.xaml" />
                 <ResourceDictionary Source="Style/RadioButtonStyle.xaml"/>
+                <ResourceDictionary Source="Style/TractBarStyle.xaml"/>
     		</ResourceDictionary.MergedDictionaries>
     		<SolidColorBrush x:Key="BrushMainWindow" Color="#FF036AC6"/>
     	</ResourceDictionary>

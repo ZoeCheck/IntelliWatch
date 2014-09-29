@@ -25,11 +25,11 @@
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
+                    <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
                 <Border BorderBrush="#0000FFED"
                         BorderThickness="1"
-                        Margin="0"
-                        CornerRadius="5">
+                        Margin="0">
                     <Border.Background>
                         <ImageBrush ImageSource="/IntelliWatch;component/Image/1.png" />
                     </Border.Background>
@@ -37,8 +37,7 @@
                 <Border BorderBrush="#0000FFED"
                         BorderThickness="1"
                         Margin="0"
-                        Grid.Column="1"
-                        CornerRadius="5">
+                        Grid.Column="1">
                     <Border.Background>
                         <ImageBrush ImageSource="/IntelliWatch;component/Image/2.png" />
                     </Border.Background>
@@ -46,8 +45,7 @@
                 <Border BorderBrush="#0000FFED"
                         BorderThickness="1"
                         Margin="0"
-                        Grid.Row="1"
-                        CornerRadius="5">
+                        Grid.Row="1">
                     <Border.Background>
                         <ImageBrush ImageSource="/IntelliWatch;component/Image/3.png" />
                     </Border.Background>
@@ -56,12 +54,12 @@
                         BorderThickness="1"
                         Margin="0"
                         Grid.Column="1"
-                        Grid.Row="1"
-                        CornerRadius="5">
+                        Grid.Row="1">
                     <Border.Background>
                         <ImageBrush ImageSource="/IntelliWatch;component/Image/4.png" />
                     </Border.Background>
                 </Border>
+                <local:UCTractBar Margin="0" Grid.Row="2" Grid.ColumnSpan="2"/>
             </Grid>
         </Border>
         <Border BorderThickness="1"
@@ -101,7 +99,7 @@
                             <TextBox Grid.Column="1"
                                      Margin="0"
                                      TextWrapping="Wrap"
-                                     Text="{Binding SelectDate,ElementName=ucDatePicker}" />
+                                     Text="{Binding SelectDate,ElementName=ucDatePicker}" Style="{DynamicResource TextBoxStyleDate}" Foreground="White" />
                         </Grid>
                         <local:UCDatePicker x:Name="ucDatePicker"
                                             Height="0"
