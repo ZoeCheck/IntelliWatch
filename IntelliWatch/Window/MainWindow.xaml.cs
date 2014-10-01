@@ -22,8 +22,8 @@ namespace IntelliWatch
 		public MainWindow()
 		{
 			InitializeComponent();
-			WindowTest wt = new WindowTest();
-			wt.ShowDialog();
+			//WindowTest wt = new WindowTest();
+			//wt.ShowDialog();
 		}
 	}
 }

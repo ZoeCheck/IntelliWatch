@@ -9,7 +9,14 @@
 	d:DesignWidth="1386" d:DesignHeight="80" MinWidth="500" MinHeight="80" >
 
 	<Grid x:Name="LayoutRoot" VerticalAlignment="Bottom">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="56"/>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="28"/>
+		</Grid.ColumnDefinitions>
 		<Slider Margin="0" Style="{DynamicResource SliderStyleRecord}"
-                IsMoveToPointEnabled="True" MinHeight="80" />
+                IsMoveToPointEnabled="True" MinHeight="80" Grid.Column="1" />
+		<TextBlock Margin="0,0,0,5" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White"><Run Language="zh-cn" Text="当前窗口"/></TextBlock>
+		<Button Content="Button" Grid.Column="2" HorizontalAlignment="Center" Height="25" Margin="0,0,0,6" Style="{DynamicResource ButtonStyleDownLoad}" VerticalAlignment="Bottom" Width="28"/>
 	</Grid>
 </UserControl>

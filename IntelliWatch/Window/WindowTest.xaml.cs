@@ -91,8 +91,8 @@ namespace IntelliWatch
 
 			btnMover.RenderTransform = rt;
 
-			allowHeightTop = 0;
-			allowHeightBottom = CanvasMain.Height - allowHeightTop;
+			allowHeightTop = 20;
+			allowHeightBottom = CanvasMain.Height - allowHeightTop;			
 		}
 	}
 }

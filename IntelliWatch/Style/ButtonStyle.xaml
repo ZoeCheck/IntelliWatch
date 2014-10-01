@@ -120,10 +120,10 @@
 									</TransformGroup>
 								</Setter.Value>
 							</Setter>
-							<Setter Property="Fill" TargetName="path" Value="#FF036AC6"/>
 						</Trigger>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="BorderBrush" TargetName="border" Value="#FFCAD9E9"/>
+							<Setter Property="Background" TargetName="border" Value="#4C000000"/>
 						</Trigger>
 						<Trigger Property="IsKeyboardFocused" Value="true"/>
 						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
@@ -173,10 +173,6 @@
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsPressed" Value="True">
-							<Setter Property="Margin" TargetName="rectangle" Value="0"/>
-							<Setter Property="Margin" TargetName="rectangle1" Value="0"/>
-							<Setter Property="Margin" TargetName="rectangle2" Value="0"/>
-							<Setter Property="Margin" TargetName="rectangle3" Value="0"/>
 							<Setter Property="RenderTransform" TargetName="border">
 								<Setter.Value>
 									<TransformGroup>
@@ -190,6 +186,7 @@
 						</Trigger>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="BorderBrush" TargetName="border" Value="#FFCAD9E9"/>
+							<Setter Property="Background" TargetName="border" Value="#4C000000"/>
 						</Trigger>
 						<Trigger Property="IsKeyboardFocused" Value="true"/>
 						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
@@ -373,6 +370,143 @@
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Foreground" Value="#ADADAD"/>
 						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleDownLoad" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" CornerRadius="2" BorderThickness="1" BorderBrush="#0081B2E6" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Path Data="M6.1568539,0.5 L19.114347,13.435503 20.995613,9.8188371 20.995613,20.818837 9.9956131,20.818837 13.45463,19.227437 0.5,6.1568546 z" Fill="White" Margin="5.918,3.38,9.082,8.62" RenderTransformOrigin="0.720873278998592,0.718558758466614" Stretch="Fill" Stroke="White" d:LayoutOverrides="VerticalAlignment" Width="Auto" Height="Auto">
+								<Path.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform Angle="45"/>
+										<TranslateTransform Y="-1.7763568394002505E-15" X="0"/>
+									</TransformGroup>
+								</Path.RenderTransform>
+							</Path>
+							<Path Data="M30.125,2.5 L30.125,11.292 2.5,11.292 2.5,2.5" Height="8.437" Margin="4.375,0,3,3" Stretch="Fill" Stroke="White" StrokeThickness="3" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="BorderBrush" TargetName="border" Value="#FF81B2E6"/>
+							<Setter Property="Background" TargetName="border" Value="#4C000000"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True"/>
+						<Trigger Property="IsPressed" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleExpandeCamera" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path x:Name="path" Data="M24.5,12.5 C24.5,19.127417 19.127417,24.5 12.5,24.5 C5.872583,24.5 0.5,19.127417 0.5,12.5 C0.5,5.872583 5.872583,0.5 12.5,0.5 C19.127417,0.5 24.5,5.872583 24.5,12.5 z M8.7941176,3.5 L16.205882,3.5 16.205882,8.7941176 21.5,8.7941176 21.5,16.205882 16.205882,16.205882 16.205882,21.5 8.7941176,21.5 8.7941176,16.205882 3.5,16.205882 3.5,8.7941176 8.7941176,8.7941176 z" Margin="0" Stretch="Fill" Stroke="#FF89F3EC" Fill="#FF72E4E4" Width="24" Height="24"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True"/>
+						<Trigger Property="IsPressed" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl1" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True"/>
+						<Trigger Property="IsPressed" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
