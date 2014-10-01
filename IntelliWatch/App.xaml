@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Style/RadioButtonStyle.xaml"/>
                 <ResourceDictionary Source="Style/TractBarStyle.xaml"/>
                 <ResourceDictionary Source="Style/PathListBoxStyle.xaml"/>
+                <ResourceDictionary Source="Style/CheckBoxStyle.xaml"/>
     		</ResourceDictionary.MergedDictionaries>
     		<SolidColorBrush x:Key="BrushMainWindow" Color="#FF036AC6"/>
     	</ResourceDictionary>

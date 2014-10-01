@@ -60,6 +60,7 @@
                     </Border.Background>
                 </Border>
                 <local:UCTractBar Margin="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                <local:UCCameraBottomControl Margin="0" VerticalAlignment="Bottom"/>
             </Grid>
         </Border>
         <Border BorderThickness="1"
@@ -103,8 +104,7 @@
                         </Grid>
                         <local:UCDatePicker x:Name="ucDatePicker"
                                             Height="0"
-                                            Margin="0"
-                                            LostFocus="ucDatePicker_LostFocus" />
+                                            Margin="0"/>
                     </StackPanel>
                 </Border>
                 <TreeView Style="{DynamicResource TreeViewStyleMain}"

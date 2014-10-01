@@ -64,12 +64,6 @@ namespace IntelliWatch
 				isShow = true;
 				stortyBoardShowDate.Begin(this, true);
 			}
-			//ucDatePicker.Visibility = ucDatePicker.Visibility == System.Windows.Visibility.Visible ? System.Windows.Visibility.Collapsed : System.Windows.Visibility.Visible;
-		}
-
-		private void ucDatePicker_LostFocus(object sender, RoutedEventArgs e)
-		{
-			//ucDatePicker.Visibility = System.Windows.Visibility.Hidden;
 		}
 	}
 }

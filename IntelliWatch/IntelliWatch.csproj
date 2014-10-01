@@ -59,9 +59,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConverterManager.cs" />
     <Compile Include="DateModel.cs" />
     <Compile Include="DayModel.cs" />
     <Compile Include="DayStruct.cs" />
+    <Compile Include="UserControl\UCCameraBottomControl.xaml.cs">
+      <DependentUpon>UCCameraBottomControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCControlCamera.xaml.cs">
       <DependentUpon>UCControlCamera.xaml</DependentUpon>
     </Compile>
@@ -78,6 +82,10 @@
       <DependentUpon>WindowTest.xaml</DependentUpon>
     </Compile>
     <Page Include="Style\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Style\CheckBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -102,6 +110,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\TreevViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCCameraBottomControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -128,25 +128,19 @@ namespace IntelliWatch
 			}
 		}
 
-		bool isShow = false;
-
-		private void btnShowControl_Click(object sender, RoutedEventArgs e)
+		private void chbShow_Checked(object sender, RoutedEventArgs e)
 		{
-			if (isShow)
+			if (storyboardShow != null)
 			{
-				isShow = false;
-				if (storyboardHide != null)
-				{
-					storyboardHide.Begin(); 
-				}
+				storyboardShow.Begin();
 			}
-			else
+		}
+
+		private void chbShow_Unchecked(object sender, RoutedEventArgs e)
+		{
+			if (storyboardHide != null)
 			{
-				isShow = true;
-				if (storyboardShow != null)
-				{
-					storyboardShow.Begin();
-				}
+				storyboardHide.Begin();
 			}
 		}
 	}

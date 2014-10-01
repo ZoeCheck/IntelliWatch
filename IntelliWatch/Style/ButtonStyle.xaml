@@ -463,8 +463,6 @@
 						</Trigger>
 						<Trigger Property="IsFocused" Value="True"/>
 						<Trigger Property="IsDefaulted" Value="True"/>
-						<Trigger Property="IsMouseOver" Value="True"/>
-						<Trigger Property="IsPressed" Value="True"/>
 						<Trigger Property="IsEnabled" Value="False"/>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
@@ -475,7 +473,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid x:Name="grid" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
 						<Grid.RenderTransform>
 							<TransformGroup>
 								<ScaleTransform/>
@@ -485,6 +483,9 @@
 							</TransformGroup>
 						</Grid.RenderTransform>
 						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M0.5,0.5 L15.125,0.5 15.125,6.0830001 C14.972222,6.7635557 14.541667,7.221889 13.833333,7.458 L1.5833333,7.458 C1.0510256,7.2506788 0.67324449,6.8418604 0.5,6.1663335 z" Fill="{x:Null}" Margin="4.792,10.792,4.583,6.25" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2"/>
+						<Rectangle Fill="#FF89F3EC" HorizontalAlignment="Right" Height="5" Margin="0,6.698,4.583,0" Stroke="#FF89F3EC" VerticalAlignment="Top" Width="7.167"/>
+						<Path Data="M6.6875,8.125 L11.4375,8.125" Fill="{x:Null}" HorizontalAlignment="Stretch" Height="1" Margin="6.975,6.698,10.666,0" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Top" Width="Auto" StrokeThickness="2"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsPressed" Value="True">
@@ -507,6 +508,820 @@
 						<Trigger Property="IsMouseOver" Value="True"/>
 						<Trigger Property="IsPressed" Value="True"/>
 						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl2" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M8,8 L12.5,8.125" Fill="#FF72E4E4" Height="2" Margin="5.042,7.5,0,0" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Top" StrokeThickness="2" HorizontalAlignment="Left" Width="6.938"/>
+						<Path Data="M8,8 L12.5,8.125" Fill="#FF72E4E4" Height="2" Margin="0,7.5,4.562,0" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Top" StrokeThickness="2" HorizontalAlignment="Right" Width="6.938"/>
+						<Path Data="M2.6816537,1 L2.6816537,9.5066667" Fill="{x:Null}" Margin="0,8.333,7.041,6.16" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" HorizontalAlignment="Right" Width="2" />
+						<Path Data="M1,9.5066667 L1,1" Fill="{x:Null}" Margin="7.375,8.333,0,6.16" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" HorizontalAlignment="Left" Width="2" />
+						<Path Data="M6.125,17 L18.5,17" Fill="{x:Null}" Height="2" Margin="5.042,0,4.562,7.125" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" VerticalAlignment="Bottom"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl3" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M5,8 L1,8 1,1 5,1" Fill="{x:Null}" HorizontalAlignment="Left" Margin="3.228,8.044,0,7.956" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" Width="5.458"/>
+						<Path Data="M5,8 L1,8 1,1 5,1" Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,7.961,3.19,8.039" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" Width="5.458" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform ScaleY="1" ScaleX="-1"/>
+									<SkewTransform AngleY="0" AngleX="0"/>
+									<RotateTransform Angle="0"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M5,8 L1,8 1,1 5,1" Fill="{x:Null}" HorizontalAlignment="Stretch" Margin="9.77,1.753,9.772,0" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" Width="Auto" Height="9.001" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="90"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M5,8 L1,8 1,1 5,1" Fill="{x:Null}" HorizontalAlignment="Stretch" Margin="9.708,0,9.834,1.728" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="2" Width="Auto" Height="8.999" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-90"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Rectangle Fill="{x:Null}" Margin="9.001,4.594,9,11.906" RadiusY="0" RadiusX="0" Stroke="#FF89F3EC" d:IsHidden="True"/>
+						<Path Data="M11.90625,5.3125 L9.9178025,12.041796 14.125578,12.000132 z" Fill="{x:Null}" Margin="10.011,6.906,9.781,10.364" Stretch="Fill" Stroke="#FF89F3EC"/>
+						<Path Data="M11.90625,5.3125 L9.9178025,12.041796 14.125578,12.000132 z" Fill="{x:Null}" Margin="10.053,10.499,9.739,6.771" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform ScaleY="-1" ScaleX="1"/>
+									<SkewTransform AngleY="0" AngleX="0"/>
+									<RotateTransform Angle="0"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M11.90625,5.3125 L9.9178025,12.041796 14.125578,12.000132 z" Fill="{x:Null}" Margin="8.094,9.104,11.698,8.166" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-90"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M11.90625,5.3125 L9.9178025,12.041796 14.125578,12.000132 z" Fill="{x:Null}" Margin="12.083,9.124,7.709,8.146" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="90"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl4" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M4.75,4.9375 L7.2437664,11.900661" Fill="{x:Null}" HorizontalAlignment="Left" Margin="6.206,7.496,0,12.265" Stretch="Fill" Stroke="#FF89F3EC" Width="1.298" Height="Auto" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="113.286"/>
+									<TranslateTransform X="10.552" Y="-1.416"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M4.75,4.9375 L7.313,11.8125" Fill="{x:Null}" HorizontalAlignment="Stretch" Margin="11.838,0,11.563,4.259" Stretch="Fill" Stroke="#FF89F3EC" Width="Auto" Height="4.162" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-6.714"/>
+									<TranslateTransform X="-5.486" Y="-8.723"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M4.75,4.9375 L7.313,11.8125" Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,6.753,7.141,0" Stretch="Fill" Stroke="#FF89F3EC" Width="1.765" Height="4.85" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="233.286"/>
+									<TranslateTransform X="-3.472" Y="8.906"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M7.8124836,11.765047 L13.608391,15.734076 14.154877,8.5767534 z" Fill="{x:Null}" Margin="7.568,8.77,10.088,8.074" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.5,0.5" StrokeThickness="2">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="119.331"/>
+									<TranslateTransform X="1.657" Y="-1.533"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M5.831876,7.5344734 C10.668086,5.3142458 15.315352,5.5368715 19.6875,8.578" Fill="{x:Null}" Height="4.475" Margin="4.687,5.657,4.453,0" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" StrokeThickness="1.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="113.286"/>
+									<TranslateTransform X="4.211" Y="6.617"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M2.0930447,11.533632 C6.9076362,9.2207207 11.554572,9.4100328 15.948669,12.577159" Fill="{x:Null}" Margin="-0.167,0,9.307,7.779" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.5,0.5" StrokeThickness="1.5" Height="4.569" VerticalAlignment="Bottom">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-6.714"/>
+									<TranslateTransform X="4.706" Y="-7.24"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M5.831876,7.5344734 C10.722642,5.2824574 15.367343,5.5057659 19.6875,8.578" Fill="{x:Null}" Height="4.504" Margin="8.39,0,0.75,7.168" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" StrokeThickness="1.5">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="233.286"/>
+									<TranslateTransform X="-7.541" Y="-0.673"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl5" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M0.5,8.396 L0.5,0.5 2.584,0.5" Fill="{x:Null}" HorizontalAlignment="Left" Margin="8,4.25,0,11.854" Stretch="Fill" Stroke="#FF89F3EC" Width="5" StrokeThickness="2"/>
+						<Path Data="M10.9375,6.75 L10.90625,11.875" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="11,6.709,0,12.354" Stretch="Fill" Stroke="#FF89F3EC" StrokeThickness="1" VerticalAlignment="Stretch" Width="1"/>
+						<Path Data="M6.4765,5.041 L0.5,5.041 2.2503333,0.5 7.75,0.5" Fill="{x:Null}" Margin="6.086,12.136,10.664,7.323" Stretch="Fill" Stroke="#FF89F3EC"/>
+						<Rectangle Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,8,8.304,9.354" RadiusY="0" RadiusX="0" Stroke="#FF89F3EC" Width="3.342"/>
+						<Path Data="M2.2799053,0.51599454 L4.9151667,0.5 7.75,5.041 -0.25861702,5.0617784 z" Fill="{x:Null}" Margin="10.68,0,5.311,4.785" Stretch="Fill" Stroke="#FF89F3EC" Height="5.561" VerticalAlignment="Bottom"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleControl6" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid x:Name="grid" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Grid.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Grid.RenderTransform>
+						<Ellipse x:Name="ellipse" Fill="{x:Null}" Height="Auto" Margin="0" Stroke="#FF89F3EC"/>
+						<Path Data="M9.6532392,9.211298 L5.9831005,9.211298 2.6532394,5.4682422 6.1775449,2.2112978 9.3389029,2.2112978 C9.3389029,2.2112978 9.3200172,2.013483 9.3200172,2.013483 7.3021781,-0.0043561193 4.0307729,-0.0045144974 2.0131292,2.0131292 -0.0045144873,4.0307729 -0.0043561091,7.3021781 2.013483,9.3200172 4.0313221,11.337856 7.3027272,11.338015 9.320371,9.320371" Fill="#FF89F3EC" Margin="10.476,2.393,4.37,11.274" Stretch="Fill" Stroke="#FF89F3EC" RenderTransformOrigin="0.606037063199922,0.503930640733725" Width="Auto" Height="Auto" VerticalAlignment="Stretch">
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-45"/>
+									<TranslateTransform Y="-1.7763568394002505E-15" X="0"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M0.5,2.3335 C0.5,1.3208859 1.3954305,0.5 2.5,0.5 L9.843,0.5 C9.488605,1.6623257 9.5002224,2.8866262 9.843,4.167 L2.5,4.167 C1.3954305,4.167 0.5,3.3461141 0.5,2.3335 z" Fill="{x:Null}" Height="4.667" Margin="2.945,0,10.947,7.508" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Bottom" >
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="-45"/>
+									<TranslateTransform X="0.31676401614674887" Y="0.76473598385325126"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path Data="M29.21875,4.15625" Fill="#FF89F3EC" HorizontalAlignment="Right" Height="1" Margin="0,4.156,-5.219,0" Stretch="Fill" Stroke="#FF89F3EC" VerticalAlignment="Top" Width="1"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="grid">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="ellipse" Value="#FF003191"/>
+						</Trigger>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl1" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Rectangle Fill="{x:Null}" Margin="4.833,6.562,5,4" Stroke="White"/>
+							<Rectangle Fill="White" HorizontalAlignment="Left" Height="2.333" Margin="4.833,3.501,0,0" Stroke="White" VerticalAlignment="Top" Width="11.084"/>
+							<Rectangle Fill="{x:Null}" Height="5.697" Margin="0,0,16.424,9.777" Stroke="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="4.167"/>
+							<Path Data="M7.083,0.5 C8.8532386,4.0571123 8.8152372,7.4850645 7.083,10.792 L0.5,8.3544999 0.5,3.26075 z" Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,14.542,10.812,7.166" Stretch="Fill" Stroke="White" Width="6.604"/>
+							<Rectangle Fill="White" HorizontalAlignment="Left" Height="3.043" Margin="8,6.562,0,0" Stroke="White" VerticalAlignment="Top" Width="4.375"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl2" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Ellipse Fill="{x:Null}" Margin="0" Stroke="White" Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.636" Margin="22.525,1.838,22.475,0" Stretch="Fill" Stroke="White" VerticalAlignment="Top"/>
+							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.792" Margin="22.525,0,22.475,1.567" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
+							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Right" Height="Auto" Margin="0,15.812,8,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.25"/>
+							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="8,15.812,0,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.126"/>
+							<Ellipse Margin="0" Stroke="White" Width="16.334" Height="16.334" HorizontalAlignment="Center" VerticalAlignment="Center">
+								<Ellipse.Fill>
+									<RadialGradientBrush>
+										<GradientStop Color="White" Offset="0.599"/>
+										<GradientStop Color="Black" Offset="1"/>
+									</RadialGradientBrush>
+								</Ellipse.Fill>
+							</Ellipse>
+							<Path Data="M7,15.812 L43.833333,15.812" Margin="13.375,15.812,13.02,16.188" Stretch="Fill" Stroke="White">
+								<Path.Fill>
+									<RadialGradientBrush>
+										<GradientStop Color="White"/>
+										<GradientStop Color="Black" Offset="1"/>
+									</RadialGradientBrush>
+								</Path.Fill>
+							</Path>
+							<Path Data="M22.525,6.6875 L22.525,25.5625" Margin="22.525,6.688,22.475,6.438" Stretch="Fill" Stroke="White">
+								<Path.Fill>
+									<RadialGradientBrush>
+										<GradientStop Color="White"/>
+										<GradientStop Color="Black" Offset="1"/>
+									</RadialGradientBrush>
+								</Path.Fill>
+							</Path>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl3" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Path Data="M3.667,9.072 L0.5,9.072 0.5,0.5 3.667,0.5" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="14.268,10.202,0,11.121" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.245"/>
+							<Path Data="M0.5,3.26075 L7.083,0.5 C7.083,0.5 7.083,10.792 7.083,10.792 L0.47654118,8.3653272" Fill="{x:Null}" Margin="17.141,4.75,22.403,6.334" Stretch="Fill" Stroke="White" HorizontalAlignment="Stretch" Width="Auto"/>
+							<Path Data="M11.299399,1.0034617 C14.337049,2.138289 16.5,5.0665524 16.5,8.5 16.5,12.006752 14.243705,14.986517 11.103654,16.066759" Fill="White" HorizontalAlignment="Right" Height="Auto" Margin="0,8.624,15.8,10.554" Stretch="Fill" Stroke="White" Width="5.504" d:LayoutOverrides="HorizontalAlignment" Opacity="0.8" />
+							<Path Data="M13.790675,0.95853321 C17.966926,2.2540108 21,6.1477991 21,10.75 21,15.500096 17.768853,19.495517 13.384576,20.658247" Fill="{x:Null}" HorizontalAlignment="Right" Height="Auto" Margin="0,7.126,14.28,9.009" Stretch="Fill" Stroke="White" Width="7.019" d:LayoutOverrides="HorizontalAlignment" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl4" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Ellipse Fill="White" Margin="0" Stroke="White" Width="18" Height="18"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl5" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Path Data="M4.9733883,0.5 L14.473388,0.5 14.473388,18.625 18.884777,18.625 9.6923883,27.817389 0.5,18.625 4.9733883,18.625 z" Fill="{x:Null}" Margin="13.558,4.25,13.058,4.6" Stretch="Fill" Stroke="White"/>
+							<Path Data="M9.558,30.317 L35.375,30.317" Fill="{x:Null}" Height="1" Margin="12.058,0,11.5,3.6" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBottomControl6" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00000000" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Path Data="M12,8 L11.875,25" Fill="{x:Null}" HorizontalAlignment="Left" Margin="17.562,7,0,8" Stretch="Fill" Stroke="White" Width="2" StrokeThickness="2"/>
+							<Path Data="M12,8 L11.875,25" Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,7,17.979,8" Stretch="Fill" Stroke="White" Width="2" StrokeThickness="2"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#7F000000"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleBeginCut" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border BorderBrush="Black" BorderThickness="0">
+						<Grid>
+							<Path x:Name="path" Data="M0.71444518,0.74811693 L8,0 7.6172058,7.5498107 z" Fill="#FF89F3EC" Height="Auto" Margin="-6.678,-1.505,3.304,-2.832" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Transparent" StrokeThickness="1" Width="Auto">
+								<Path.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform Angle="45"/>
+										<TranslateTransform X="0.46180478015531179" Y="-0.32689536341968584"/>
+									</TransformGroup>
+								</Path.RenderTransform>
+							</Path>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="path">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+										<SkewTransform/>
+										<RotateTransform Angle="45"/>
+										<TranslateTransform X="-4.4408920985006262E-16"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="path" Value="White"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleEndCut" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<Path x:Name="path" Data="M0.71444518,0.74811693 L8,0 7.6172058,7.5498107 z" Fill="#FF89F3EC" Height="Auto" Margin="0.711,-1.6,-4.085,-2.737" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Transparent" StrokeThickness="1" Width="Auto">
+								<Path.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform ScaleY="1" ScaleX="-1"/>
+										<SkewTransform AngleY="0" AngleX="0"/>
+										<RotateTransform Angle="-45"/>
+										<TranslateTransform X="0.46180478015531179" Y="-0.32689536341968584"/>
+									</TransformGroup>
+								</Path.RenderTransform>
+							</Path>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Stroke" TargetName="path" Value="White"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
