@@ -144,6 +144,8 @@
 			</Setter.Value>
 		</Setter>		
 	</Style>
+	<SolidColorBrush x:Key="BrushTreeViewItemSelected" Color="#FF087BBE"/>
+	<SolidColorBrush x:Key="BrushTreeViewItemSelectedBorder" Color="#FF89F3EC"/>
 	<Style x:Key="TreeViewItemStyleSecond" TargetType="{x:Type TreeViewItem}">
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
@@ -165,9 +167,20 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 						<ToggleButton x:Name="Expander" ClickMode="Press" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ExpandCollapseToggleStyle}"/>
-						<Path x:Name="path" Grid.Column="1" Data="M0.5,1.5 C0.5,0.94771525 0.94771525,0.5 1.5,0.5 L75.697333,0.5 C75.697333,0.5 79.226667,4.5416667 79.226667,4.5416667 L79.226667,14.5 C79.226667,15.052285 78.778951,15.5 78.226667,15.5 L3.5723333,15.5 C3.5723333,15.5 0.5,12.416667 0.5,12.416667 z" Fill="#FF2F81D8" Margin="0" Stretch="Fill" Stroke="#FF00F6F9" StrokeThickness="1" Visibility="Hidden" HorizontalAlignment="Left" Width="{Binding ActualWidth, ElementName=Bd}" />
 						<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true" HorizontalAlignment="Left">
-							<ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="5,2"/>
+							<Grid Margin="0,2" Width="Auto">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="10" MaxWidth="10"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="10" MaxWidth="10"/>
+								</Grid.ColumnDefinitions>
+								<Rectangle x:Name="rectangle" Grid.Column="1" Fill="{DynamicResource BrushTreeViewItemSelected}" Margin="-1,0" Stroke="#FF00F6F9" StrokeThickness="0" Visibility="Hidden"/>
+								<Path x:Name="path" Grid.Column="1" Data="M16.364,0.75166667 L18.905667,0.87666667" Fill="#FF2F81D8" Height="1" Margin="-1,0" Stretch="Fill" Stroke="{DynamicResource BrushTreeViewItemSelectedBorder}" StrokeThickness="1" VerticalAlignment="Top" Visibility="Hidden"/>
+								<Path x:Name="path1" Grid.Column="1" Data="M16.364,0.75166667 L18.905667,0.87666667" Fill="#FF2F81D8" Height="1" Margin="-1,0" Stretch="Fill" Stroke="{DynamicResource BrushTreeViewItemSelectedBorder}" StrokeThickness="1" VerticalAlignment="Bottom" Visibility="Hidden"/>
+								<Path x:Name="path2" Data="M9.5,15.336667 L4.1556667,15.336667 0.5,10.835 0.5,0.5 9.5,0.5" Fill="{DynamicResource BrushTreeViewItemSelected}" Margin="0" Stretch="Fill" Stroke="{DynamicResource BrushTreeViewItemSelectedBorder}" StrokeThickness="1" Visibility="Hidden"/>
+								<Path x:Name="path3" Grid.Column="2" Data="M0.5,0.5 L5.9056667,0.5 9.5,5.3558335 9.5,15.336667 0.5,15.336667" Fill="{DynamicResource BrushTreeViewItemSelected}" Margin="0" Stretch="Fill" Stroke="{DynamicResource BrushTreeViewItemSelectedBorder}" StrokeThickness="1" Visibility="Hidden"/>
+								<ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="6,0" Grid.ColumnSpan="3"/>
+							</Grid>
 						</Border>
 						<ItemsPresenter x:Name="ItemsHost" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
 						<Path Data="M-22.75,6.25 L4.25,5.5" Fill="#FF6BB3FF" HorizontalAlignment="Stretch" Height="1" Margin="-8.177,0,-0.812,0" Stretch="Fill" Stroke="White" StrokeThickness="1" VerticalAlignment="Center" Width="Auto" StrokeDashArray="1 2"/>
@@ -184,16 +197,19 @@
 							<Setter Property="Visibility" TargetName="Expander" Value="Hidden"/>
 						</Trigger>
 						<Trigger Property="IsSelected" Value="true">
-							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
 							<Setter Property="Fill" TargetName="ellipse" Value="#337CD4FF"/>
 							<Setter Property="Visibility" TargetName="grid" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="rectangle" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path1" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path2" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path3" Value="Visible"/>
 						</Trigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
 								<Condition Property="IsSelected" Value="true"/>
 								<Condition Property="IsSelectionActive" Value="false"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
 						</MultiTrigger>
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>

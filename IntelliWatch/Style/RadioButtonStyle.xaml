@@ -71,4 +71,31 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	<Style x:Key="RadioButtonStyleMain4Control" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Background" Value="#F4F4F4"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border x:Name="border" BorderBrush="#0089F3EC" BorderThickness="2" Background="#00000000" CornerRadius="2">
+						<ContentPresenter RecognizesAccessKey="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="BorderBrush" TargetName="border" Value="#FF89F3EC"/>
+						</Trigger>
+						<Trigger Property="HasContent" Value="true">
+							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+							<Setter Property="Padding" Value="4,0,0,0"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 </ResourceDictionary>

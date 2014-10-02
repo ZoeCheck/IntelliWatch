@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.ComponentModel;
 
 namespace IntelliWatch
 {
@@ -63,6 +56,46 @@ namespace IntelliWatch
 			{
 				isShow = true;
 				stortyBoardShowDate.Begin(this, true);
+			}
+		}
+
+		private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+		{
+			TreeViewItem tviNew = e.NewValue as TreeViewItem;
+			TreeViewItem tviOld = e.OldValue as TreeViewItem;
+
+			if (tviNew != null)
+			{
+				tviNew.Foreground = new SolidColorBrush(Color.FromRgb(137, 243, 236));
+			}
+
+			if (tviOld != null)
+			{
+				tviOld.Foreground = new SolidColorBrush(Colors.White);
+			}
+		}
+
+		private void InitBackImg()
+		{
+			string path = AppDomain.CurrentDomain.BaseDirectory;
+			UCMainPage uc1 = r1.Content as UCMainPage;
+			uc1.SetBackImg(path + @"Image\1.png");
+
+			UCMainPage uc2 = r2.Content as UCMainPage;
+			uc2.SetBackImg(path + @"Image\2.png");
+
+			UCMainPage uc3 = r3.Content as UCMainPage;
+			uc3.SetBackImg(path + @"Image\3.png");
+
+			UCMainPage uc4 = r4.Content as UCMainPage;
+			uc4.SetBackImg(path + @"Image\4.png");
+		}
+
+		private void UserControl_Loaded(object sender, RoutedEventArgs e)
+		{
+			if (!DesignerProperties.GetIsInDesignMode(this))
+			{
+				InitBackImg();
 			}
 		}
 	}

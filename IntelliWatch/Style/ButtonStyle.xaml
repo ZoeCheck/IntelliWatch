@@ -893,13 +893,14 @@
 								<TranslateTransform/>
 							</TransformGroup>
 						</Border.RenderTransform>
-						<Grid>
-							<Rectangle Fill="{x:Null}" Margin="4.833,6.562,5,4" Stroke="White"/>
-							<Rectangle Fill="White" HorizontalAlignment="Left" Height="2.333" Margin="4.833,3.501,0,0" Stroke="White" VerticalAlignment="Top" Width="11.084"/>
-							<Rectangle Fill="{x:Null}" Height="5.697" Margin="0,0,16.424,9.777" Stroke="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="4.167"/>
-							<Path Data="M7.083,0.5 C8.8532386,4.0571123 8.8152372,7.4850645 7.083,10.792 L0.5,8.3544999 0.5,3.26075 z" Fill="{x:Null}" HorizontalAlignment="Right" Margin="0,14.542,10.812,7.166" Stretch="Fill" Stroke="White" Width="6.604"/>
-							<Rectangle Fill="White" HorizontalAlignment="Left" Height="3.043" Margin="8,6.562,0,0" Stroke="White" VerticalAlignment="Top" Width="4.375"/>
-						</Grid>
+						<Canvas Margin="0" Width="30" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+							<Rectangle Fill="{x:Null}" Margin="0" Stroke="White" Width="30" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="3.457"/>
+							<Rectangle Fill="White" HorizontalAlignment="Stretch" Height="2.333" Margin="0" Stroke="White" VerticalAlignment="Stretch" Width="11.084"/>
+							<Rectangle Fill="{x:Null}" Height="4.51" Margin="0" Stroke="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="3.479" Canvas.Left="15.993" Canvas.Top="12.275"/>
+							<Path Data="M7.083,0.5 C8.8532386,4.0571123 8.8152372,7.4850645 7.083,10.792 L0.5,8.3544999 0.5,3.26075 z" Fill="{x:Null}" HorizontalAlignment="Stretch" Margin="0" Stretch="Fill" Stroke="White" Width="4.469" Height="8.917" Canvas.Left="18.564" Canvas.Top="9.843"/>
+							<Rectangle Fill="White" HorizontalAlignment="Stretch" Height="3.043" Margin="0" Stroke="White" VerticalAlignment="Stretch" Width="4.375" Canvas.Left="3.833" Canvas.Top="4.957"/>
+							<Grid Height="33" Canvas.Left="1" Canvas.Top="1" Width="46"/>
+						</Canvas>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsPressed" Value="True">
@@ -949,12 +950,12 @@
 							</TransformGroup>
 						</Border.RenderTransform>
 						<Grid>
-							<Ellipse Fill="{x:Null}" Margin="0" Stroke="White" Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.636" Margin="22.525,1.838,22.475,0" Stretch="Fill" Stroke="White" VerticalAlignment="Top"/>
-							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.792" Margin="22.525,0,22.475,1.567" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
-							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Right" Height="Auto" Margin="0,15.812,8,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.25"/>
-							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="8,15.812,0,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.126"/>
-							<Ellipse Margin="0" Stroke="White" Width="16.334" Height="16.334" HorizontalAlignment="Center" VerticalAlignment="Center">
+							<Ellipse Fill="{x:Null}" Margin="0" Stroke="White" Width="21.5" Height="21.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.636" Margin="22.525,3.052,22.475,0" Stretch="Fill" Stroke="White" VerticalAlignment="Top"/>
+							<Path Data="M23.083333,2.8333333 L23.333333,4.5" Fill="{x:Null}" Height="3.792" Margin="22.525,0,22.475,2.646" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
+							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Right" Height="Auto" Margin="0,15.812,8.77,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.25"/>
+							<Path Data="M35,15.375 L37.1875,15.3125" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="9.249,15.812,0,16.188" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.126"/>
+							<Ellipse Margin="0" Stroke="White" Width="14.282" Height="14.282" HorizontalAlignment="Center" VerticalAlignment="Center">
 								<Ellipse.Fill>
 									<RadialGradientBrush>
 										<GradientStop Color="White" Offset="0.599"/>
@@ -962,7 +963,7 @@
 									</RadialGradientBrush>
 								</Ellipse.Fill>
 							</Ellipse>
-							<Path Data="M7,15.812 L43.833333,15.812" Margin="13.375,15.812,13.02,16.188" Stretch="Fill" Stroke="White">
+							<Path Data="M7,15.812 L43.833333,15.812" Margin="13.375,15.812,13.645,16.188" Stretch="Fill" Stroke="White">
 								<Path.Fill>
 									<RadialGradientBrush>
 										<GradientStop Color="White"/>
@@ -970,7 +971,7 @@
 									</RadialGradientBrush>
 								</Path.Fill>
 							</Path>
-							<Path Data="M22.525,6.6875 L22.525,25.5625" Margin="22.525,6.688,22.475,6.438" Stretch="Fill" Stroke="White">
+							<Path Data="M22.525,6.6875 L22.525,25.5625" Margin="22.525,7.48,22.475,7.438" Stretch="Fill" Stroke="White">
 								<Path.Fill>
 									<RadialGradientBrush>
 										<GradientStop Color="White"/>
@@ -1082,7 +1083,12 @@
 							</TransformGroup>
 						</Border.RenderTransform>
 						<Grid>
-							<Ellipse Fill="White" Margin="0" Stroke="White" Width="18" Height="18"/>
+							<Ellipse Fill="White" Margin="14.855,8.355,14.854,8.354" Stroke="White" Width="Auto" Height="Auto"/>
+							<Ellipse Fill="White" Margin="14,7.5" Stroke="White" Width="18" Height="18" StrokeThickness="0">
+								<Ellipse.Effect>
+									<BlurEffect Radius="5"/>
+								</Ellipse.Effect>
+							</Ellipse>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
@@ -1133,8 +1139,8 @@
 							</TransformGroup>
 						</Border.RenderTransform>
 						<Grid>
-							<Path Data="M4.9733883,0.5 L14.473388,0.5 14.473388,18.625 18.884777,18.625 9.6923883,27.817389 0.5,18.625 4.9733883,18.625 z" Fill="{x:Null}" Margin="13.558,4.25,13.058,4.6" Stretch="Fill" Stroke="White"/>
-							<Path Data="M9.558,30.317 L35.375,30.317" Fill="{x:Null}" Height="1" Margin="12.058,0,11.5,3.6" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
+							<Path Data="M4.9733883,0.5 L14.473388,0.5 14.473388,18.625 18.884777,18.625 9.6923883,27.817389 0.5,18.625 4.9733883,18.625 z" Fill="{x:Null}" Margin="13.558,5.454,13.058,6.148" Stretch="Fill" Stroke="White"/>
+							<Path Data="M9.558,30.317 L35.375,30.317" Fill="{x:Null}" Height="1" Margin="11.87,0,11.688,5.148" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
@@ -1322,6 +1328,24 @@
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Foreground" Value="#ADADAD"/>
 						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ButtonStyleMover" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<Rectangle x:Name="rtMover" Fill="#FF72E5E5" RadiusY="3" RadiusX="3" Stroke="#FF6DCDC7"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True"/>
+						<Trigger Property="IsPressed" Value="True"/>
+						<Trigger Property="IsEnabled" Value="False"/>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>

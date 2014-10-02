@@ -7,7 +7,8 @@
              x:Class="IntelliWatch.UCRT1"
              x:Name="UserControl"
              d:DesignWidth="640"
-             d:DesignHeight="480">
+             d:DesignHeight="480"
+             Loaded="UserControl_Loaded">
 
     <Grid x:Name="LayoutRoot">
         <Grid.ColumnDefinitions>
@@ -20,47 +21,36 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
-                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition />
                     <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
-                <Border BorderBrush="#0000FFED"
-                        BorderThickness="1"
-                        Margin="0">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/IntelliWatch;component/Image/1.png" />
-                    </Border.Background>
+                <Border BorderBrush="#0082B3E7" BorderThickness="1" CornerRadius="2">
+                	<Grid Margin="0">
+                		<Grid.ColumnDefinitions>
+                			<ColumnDefinition />
+                			<ColumnDefinition />
+                		</Grid.ColumnDefinitions>
+                		<Grid.RowDefinitions>
+                			<RowDefinition />
+                			<RowDefinition />
+                		</Grid.RowDefinitions>
+                		<RadioButton x:Name="r1" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}">
+                			<local:UCMainPage/>
+                		</RadioButton>
+                		<RadioButton x:Name="r2" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1">
+                			<local:UCMainPage/>
+                		</RadioButton>
+                		<RadioButton x:Name="r3" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Row="1">
+                			<local:UCMainPage/>
+                		</RadioButton>
+                		<RadioButton x:Name="r4" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" Grid.Row="1" Margin="0">
+                			<local:UCMainPage/>
+                		</RadioButton>
+                	</Grid>
                 </Border>
-                <Border BorderBrush="#0000FFED"
-                        BorderThickness="1"
-                        Margin="0"
-                        Grid.Column="1">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/IntelliWatch;component/Image/2.png" />
-                    </Border.Background>
-                </Border>
-                <Border BorderBrush="#0000FFED"
-                        BorderThickness="1"
-                        Margin="0"
-                        Grid.Row="1">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/IntelliWatch;component/Image/3.png" />
-                    </Border.Background>
-                </Border>
-                <Border BorderBrush="#0000FFED"
-                        BorderThickness="1"
-                        Margin="0"
-                        Grid.Column="1"
-                        Grid.Row="1">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/IntelliWatch;component/Image/4.png" />
-                    </Border.Background>
-                </Border>
-                <local:UCTractBar Margin="0" Grid.Row="2" Grid.ColumnSpan="2"/>
-                <local:UCCameraBottomControl Margin="0" VerticalAlignment="Bottom"/>
+                <local:UCTractBar Margin="0" Grid.Row="1"/>
             </Grid>
         </Border>
         <Border BorderThickness="1"
@@ -111,16 +101,17 @@
                           Background="{x:Null}"
                           BorderBrush="#FF88AAAF"
                           ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                          Margin="0,2,0,0">
+                          Margin="0,2,0,0"
+                          SelectedItemChanged="TreeView_SelectedItemChanged">
                     <TreeViewItem Header="新北区"
                                   IsExpanded="True"
                                   Style="{DynamicResource TreeViewItemStyleMain}"
                                   Foreground="White">
-                        <TreeViewItem Header="长江路"
+                        <TreeViewItem Header="长江路黄河西路"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
+                                      Margin="0,2,5,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="黄河西路"
+                        <TreeViewItem Header="黄河西路长江路东侧"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
@@ -128,11 +119,11 @@
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="局前街"
+                        <TreeViewItem Header="局前街第一人民医院"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="北京附属一中"
+                        <TreeViewItem Header="省人民大学附属一中"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
@@ -140,15 +131,15 @@
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="北直街"
+                        <TreeViewItem Header="北直街太湖东路"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="人民中路"
+                        <TreeViewItem Header="人民路太湖中路"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="景林西路"
+                        <TreeViewItem Header="景林西路北直街"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
@@ -157,28 +148,69 @@
                                   Style="{DynamicResource TreeViewItemStyleMain}"
                                   IsExpanded="True"
                                   Foreground="White">
-                        <TreeViewItem Header="区政府"
+                        <TreeViewItem Header="区政府钟楼广场"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
-                        <TreeViewItem Header="火车站"
+                        <TreeViewItem Header="火车站东侧"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
+                        <TreeViewItem Header="局前街第一人民医院"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="省人民大学附属一中"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="人民路太湖中路"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="环太平洋南路北景区"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="武汉长沙路"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
                     </TreeViewItem>
                     <TreeViewItem Header="武进区"
                                   Style="{DynamicResource TreeViewItemStyleMain}"
                                   IsExpanded="True"
                                   Foreground="White">
-                        <TreeViewItem Header="中吴大道"
+                        <TreeViewItem Header="中吴大道南洋大桥"
                                       Style="{DynamicResource TreeViewItemStyleSecond}"
                                       Margin="0,2"
                                       Foreground="White" />
+                        <TreeViewItem Header="长江路黄河西路"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2,5,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="黄河西路长江路东侧"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="北直街太湖东路"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="局前街第一人民医院"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
+                        <TreeViewItem Header="景林西路北直街"
+                        	Style="{DynamicResource TreeViewItemStyleSecond}"
+                        	Margin="0,2"
+                        	Foreground="White" />
                     </TreeViewItem>
                 </TreeView>
                 <ScrollViewer Margin="0"
                               ScrollViewer.VerticalScrollBarVisibility="Auto" />
             </StackPanel>
         </Border>
+        <local:UCControlCamera Margin="112,64,53,156"/>
     </Grid>
 </UserControl>

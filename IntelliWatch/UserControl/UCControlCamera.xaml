@@ -5,8 +5,6 @@
              xmlns:ec="http://schemas.microsoft.com/expression/2010/controls"
              x:Class="IntelliWatch.UCControlCamera"
              x:Name="UserControl"
-             d:DesignWidth="260"
-             d:DesignHeight="260"
              mc:Ignorable="d"
              Width="260"
              Height="260">
@@ -371,7 +369,7 @@
         </Storyboard>
     </UserControl.Resources>
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Width="260" Height="260" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -412,15 +410,7 @@
                   Stroke="#FF89F3EC"
                   Canvas.Top="35.957"
                   Width="43.074" />
-            <Rectangle x:Name="rtMover"
-                       Fill="#FF72E5E5"
-                       Height="20"
-                       Canvas.Left="-5"
-                       Stroke="#FF6DCDC7"
-                       Canvas.Top="-8.06"
-                       Width="10"
-                       RadiusX="3"
-                       RadiusY="3" />
+            <Button x:Name="btnMover" Content="Button" Height="20" Canvas.Left="-5" Style="{DynamicResource ButtonStyleMover}" Canvas.Top="-8.06" Width="10"/>
             <Path Data="M130,0.5 C201.52088,0.5 259.5,58.479125 259.5,130 259.5,201.52088 201.52088,259.5 130,259.5"
                   Height="260"
                   Canvas.Left="-0.5"
@@ -534,7 +524,7 @@
             </Path.RenderTransform>
         </Path>
         <ec:PathListBox x:Name="plbControl"
-                        Margin="0,0,-0.5,0"
+                        Margin="0"
                         FocusVisualStyle="{x:Null}"
                         Style="{DynamicResource PathListBoxStyleControl}"
                         ItemContainerStyle="{DynamicResource PathListBoxItemStyleControl}"

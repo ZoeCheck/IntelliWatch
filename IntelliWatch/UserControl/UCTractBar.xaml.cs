@@ -68,12 +68,16 @@ namespace IntelliWatch
 			{
 				Point pCanvas = e.GetPosition(CanvasCut);
 				Button btn = targetElement as Button;
-				//设置最终位置
-				Canvas.SetLeft(btn, pCanvas.X - btn.Width / 2);
-				Canvas.SetTop(btn, CanvasCut.ActualHeight / 2 - btn.Height / 2);
+				if (btn != null)
+				{
+					//设置剪切按钮的最终位置
+					Canvas.SetLeft(btn, pCanvas.X - btn.Width / 2);
+					Canvas.SetTop(btn, CanvasCut.ActualHeight / 2 - btn.Height / 2);
 
-				Canvas.SetLeft(rtCut, Canvas.GetLeft(btnBegin));
-				CutLength = Canvas.GetLeft(btnEnd) - Canvas.GetLeft(btnBegin);
+					//设置范围rectangle的左边距和长度
+					Canvas.SetLeft(rtCut, Canvas.GetLeft(btnBegin));
+					CutLength = Canvas.GetLeft(btnEnd) - Canvas.GetLeft(btnBegin);
+				}
 
 				//this.Cursor = System.Windows.Input.Cursors.ScrollAll;
 			}

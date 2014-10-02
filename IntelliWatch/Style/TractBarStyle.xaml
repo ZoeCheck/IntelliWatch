@@ -383,7 +383,20 @@
 								<TranslateTransform Y="0"/>
 							</TransformGroup>
 						</Canvas.RenderTransform>
-						<Path x:Name="path" Data="M11.5,6 C11.5,9.0375661 9.0375661,11.5 6,11.5 2.9624339,11.5 0.5,9.0375661 0.5,6 0.5,2.9624339 2.9624339,0.5 6,0.5 9.0375661,0.5 11.5,2.9624339 11.5,6 z" Fill="White" Height="Auto" Stretch="None" Stroke="#00000000" Width="Auto" RenderTransformOrigin="0.5,0.5" >
+						<Path x:Name="path" Data="M12.791667,6.6458333 C12.791667,10.040083 10.040083,12.791667 6.6458333,12.791667 3.2515833,12.791667 0.5,10.040083 0.5,6.6458333 0.5,3.2515833 3.2515833,0.5 6.6458333,0.5 10.040083,0.5 12.791667,3.2515833 12.791667,6.6458333 z" Fill="#FF54FFEB" Height="13.292" Stretch="None" Stroke="#00000000" Width="13.292" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Canvas.Left="-0.646" Canvas.Top="-0.646" >
+							<Path.Effect>
+								<BlurEffect Radius="10"/>
+							</Path.Effect>
+							<Path.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform/>
+									<TranslateTransform Y="5"/>
+								</TransformGroup>
+							</Path.RenderTransform>
+						</Path>
+						<Path x:Name="path_Copy" Data="M11.374775,5.9373873 C11.374775,8.9403734 8.9403734,11.374775 5.9373873,11.374775 2.9344013,11.374775 0.5,8.9403734 0.5,5.9373873 0.5,2.9344013 2.9344013,0.5 5.9373873,0.5 8.9403734,0.5 11.374775,2.9344013 11.374775,5.9373873 z" Fill="White" Height="11.876" Stretch="None" Stroke="#00000000" Width="11.876" RenderTransformOrigin="0.5,0.5" Canvas.Left="0.062" Canvas.Top="0.062" Visibility="Visible" >
 							<Path.RenderTransform>
 								<TransformGroup>
 									<ScaleTransform/>
@@ -400,12 +413,15 @@
 						</Path>
 					</Canvas>
 					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="true" SourceName="path">
+						<Trigger Property="IsMouseOver" Value="true" SourceName="canvas">
 							<Setter Property="Visibility" TargetName="path1" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
 						</Trigger>
 						<Trigger Property="Foreground" Value="Blue"/>
 						<Trigger Property="IsDragging" Value="true">
 							<Setter Property="Visibility" TargetName="path1" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path_Copy" Value="Visible"/>
+							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
 						</Trigger>
 						<Trigger Property="IsEnabled" Value="false"/>
 					</ControlTemplate.Triggers>

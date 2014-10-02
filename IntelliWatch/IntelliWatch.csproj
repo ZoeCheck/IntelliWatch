@@ -37,11 +37,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\MainIco.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Controls" />
+    <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,6 +76,9 @@
     </Compile>
     <Compile Include="UserControl\UCDatePicker.xaml.cs">
       <DependentUpon>UCDatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCMainPage.xaml.cs">
+      <DependentUpon>UCMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCRT1.xaml.cs">
       <DependentUpon>UCRT1.xaml</DependentUpon>
@@ -122,6 +130,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControl\UCDatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -178,10 +190,18 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\1.png" />
-    <Resource Include="Image\2.png" />
-    <Resource Include="Image\3.png" />
-    <Resource Include="Image\4.png" />
+    <Content Include="Image\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="截图\1.png" />
     <Resource Include="截图\10.png" />
     <Resource Include="截图\11.png" />
@@ -196,6 +216,9 @@
     <Resource Include="截图\7.png" />
     <Resource Include="截图\8.png" />
     <Resource Include="截图\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\MainIco.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

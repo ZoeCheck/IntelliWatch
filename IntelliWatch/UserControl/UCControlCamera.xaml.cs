@@ -77,8 +77,8 @@ namespace IntelliWatch
 				double locationX = Math.Sqrt(r * r - locationY * locationY);
 
 				//设置最终位置
-				Canvas.SetLeft(rtMover, locationX - rtMover.Width / 2);
-				Canvas.SetTop(rtMover, pCanvas.Y - rtMover.Height / 2);
+				Canvas.SetLeft(btnMover, locationX - btnMover.Width / 2);
+				Canvas.SetTop(btnMover, pCanvas.Y - btnMover.Height / 2);
 				if (pCanvas.Y <= CanvasMain.Height / 2)
 				{
 					rt.Angle = Math.Round(Math.Asin(locationX / r) / Math.PI * 180, 2);
@@ -96,6 +96,7 @@ namespace IntelliWatch
 			//取消捕获鼠标   
 			Mouse.Capture(null);
 			//this.Cursor = System.Windows.Input.Cursors.Arrow;
+			btnMover.Focus();
 		}
 
 		private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -103,18 +104,18 @@ namespace IntelliWatch
 			r = CanvasMain.Width;
 
 			rt = new RotateTransform();
-			rt.CenterX = rtMover.Width / 2;
-			rt.CenterY = rtMover.Height / 2;
+			rt.CenterX = btnMover.Width / 2;
+			rt.CenterY = btnMover.Height / 2;
 
-			rtMover.RenderTransform = rt;
+			btnMover.RenderTransform = rt;
 
 			allowHeightTop = 38;
 			allowHeightBottom = CanvasMain.Height - allowHeightTop;
 
 			//设置Mover的初始位置
 			double left = Math.Round(Math.Sqrt(r * r - (allowHeightTop - r) * (allowHeightTop - r)), 2);
-			Canvas.SetLeft(rtMover, left - rtMover.Width / 2);
-			Canvas.SetTop(rtMover, allowHeightTop - rtMover.Height / 2);
+			Canvas.SetLeft(btnMover, left - btnMover.Width / 2);
+			Canvas.SetTop(btnMover, allowHeightTop - btnMover.Height / 2);
 			rt.Angle = Math.Round(Math.Asin(left / r) / Math.PI * 180, 2);
 
 			storyboardShow = this.FindResource("StoryboardShow") as Storyboard;
