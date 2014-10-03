@@ -1031,7 +1031,7 @@
 						<Grid>
 							<Path Data="M3.667,9.072 L0.5,9.072 0.5,0.5 3.667,0.5" Fill="{x:Null}" HorizontalAlignment="Left" Height="Auto" Margin="14.268,10.202,0,11.121" Stretch="Fill" Stroke="White" VerticalAlignment="Stretch" Width="4.245"/>
 							<Path Data="M0.5,3.26075 L7.083,0.5 C7.083,0.5 7.083,10.792 7.083,10.792 L0.47654118,8.3653272" Fill="{x:Null}" Margin="17.141,4.75,22.403,6.334" Stretch="Fill" Stroke="White" HorizontalAlignment="Stretch" Width="Auto"/>
-							<Path Data="M11.299399,1.0034617 C14.337049,2.138289 16.5,5.0665524 16.5,8.5 16.5,12.006752 14.243705,14.986517 11.103654,16.066759" Fill="White" HorizontalAlignment="Right" Height="Auto" Margin="0,8.624,15.8,10.554" Stretch="Fill" Stroke="White" Width="5.504" d:LayoutOverrides="HorizontalAlignment" Opacity="0.8" />
+							<Path Data="M11.299399,1.0034617 C14.337049,2.138289 16.5,5.0665524 16.5,8.5 16.5,12.006752 14.243705,14.986517 11.103654,16.066759" Fill="White" HorizontalAlignment="Right" Height="Auto" Margin="0,9.894,16.306,11.824" Stretch="Fill" Stroke="White" Width="4.492" d:LayoutOverrides="HorizontalAlignment" Opacity="0.8" />
 							<Path Data="M13.790675,0.95853321 C17.966926,2.2540108 21,6.1477991 21,10.75 21,15.500096 17.768853,19.495517 13.384576,20.658247" Fill="{x:Null}" HorizontalAlignment="Right" Height="Auto" Margin="0,7.126,14.28,9.009" Stretch="Fill" Stroke="White" Width="7.019" d:LayoutOverrides="HorizontalAlignment" />
 						</Grid>
 					</Border>

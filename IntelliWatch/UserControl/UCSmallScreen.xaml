@@ -1,0 +1,53 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:IntelliWatch"
+             mc:Ignorable="d"
+             x:Class="IntelliWatch.UCSmallScreen"
+             x:Name="UserControl"
+             d:DesignWidth="640"
+             d:DesignHeight="480"
+             Width="160"
+             Height="160" MinWidth="130" MinHeight="116">
+    <UserControl.Resources>
+        <local:BoolToVisibility x:Key="btv" />
+    </UserControl.Resources>
+    <Border BorderThickness="1"
+            BorderBrush="#FFD0D0D0"
+            Background="#FF326EA0"
+            CornerRadius="2">
+        <Grid x:Name="LayoutRoot">
+            <StackPanel Visibility="{Binding IsChecked,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=RadioButton}, Converter={StaticResource ResourceKey=btv}}"
+                        Height="32"
+                        Margin="0,0,0,5"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        d:LayoutOverrides="Width"
+                        HorizontalAlignment="Center">
+                <RadioButton Content="RadioButton"
+                             Width="22"
+                             Style="{DynamicResource RadioButtonStyleScreen1}"
+                             Height="22"
+                             IsChecked="True"
+                             Margin="2,0" />
+                <RadioButton Content="RadioButton"
+                             Style="{DynamicResource RadioButtonStyleScreen4}"
+                             Width="22"
+                             Height="22"
+                             Margin="2,0" />
+                <RadioButton Content="RadioButton"
+                             Style="{DynamicResource RadioButtonStyleScreen9}"
+                             Width="22"
+                             Height="22"
+                             Margin="2,0" />
+                <RadioButton Content="RadioButton"
+                             Style="{DynamicResource RadioButtonStyleScreen16}"
+                             Width="22"
+                             Height="22"
+                             Margin="2,0" />
+            </StackPanel>
+            <TextBlock Margin="0" TextWrapping="Wrap" Text="徐家汇濮阳大道" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+        </Grid>
+    </Border>
+</UserControl>

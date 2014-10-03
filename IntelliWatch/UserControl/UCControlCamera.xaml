@@ -7,7 +7,8 @@
              x:Name="UserControl"
              mc:Ignorable="d"
              Width="260"
-             Height="260">
+             Height="260"
+             Background="#008EC010">
     <UserControl.Resources>
         <Storyboard x:Key="StoryboardShow">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
@@ -369,7 +370,10 @@
         </Storyboard>
     </UserControl.Resources>
 
-    <Grid x:Name="LayoutRoot" Width="260" Height="260" Margin="0">
+    <Grid x:Name="LayoutRoot"
+          Width="260"
+          Height="260"
+          Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -410,7 +414,13 @@
                   Stroke="#FF89F3EC"
                   Canvas.Top="35.957"
                   Width="43.074" />
-            <Button x:Name="btnMover" Content="Button" Height="20" Canvas.Left="-5" Style="{DynamicResource ButtonStyleMover}" Canvas.Top="-8.06" Width="10"/>
+            <Button x:Name="btnMover"
+                    Content="Button"
+                    Height="20"
+                    Canvas.Left="-5"
+                    Style="{DynamicResource ButtonStyleMover}"
+                    Canvas.Top="-8.06"
+                    Width="10" />
             <Path Data="M130,0.5 C201.52088,0.5 259.5,58.479125 259.5,130 259.5,201.52088 201.52088,259.5 130,259.5"
                   Height="260"
                   Canvas.Left="-0.5"
@@ -632,7 +642,8 @@
               Stretch="Fill"
               Stroke="#FF88F2EB"
               Visibility="Hidden" />
-        <CheckBox x:Name="chbShow"
+        <CheckBox x:FieldModifier="public"
+                  x:Name="chbShow"
                   Content="CheckBox"
                   Grid.Column="1"
                   HorizontalAlignment="Left"

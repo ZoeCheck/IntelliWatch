@@ -44,9 +44,6 @@ namespace IntelliWatch
 		#endregion
 
 		#region 业务
-
-		#endregion
-
 		private void CanvasMain_PreviewMouseDown(object sender, MouseButtonEventArgs e)
 		{
 			var targetElement = e.Source as IInputElement;
@@ -144,5 +141,6 @@ namespace IntelliWatch
 				storyboardHide.Begin();
 			}
 		}
+		#endregion
 	}
 }

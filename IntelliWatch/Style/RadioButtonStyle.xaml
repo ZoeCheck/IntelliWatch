@@ -79,12 +79,210 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type RadioButton}">
-					<Border x:Name="border" BorderBrush="#0089F3EC" BorderThickness="2" Background="#00000000" CornerRadius="2">
+					<Border x:Name="border" BorderBrush="#0000E4FF" BorderThickness="1" Background="#00000000" CornerRadius="2">
 						<ContentPresenter RecognizesAccessKey="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsChecked" Value="True">
-							<Setter Property="BorderBrush" TargetName="border" Value="#FF89F3EC"/>
+							<Setter Property="BorderBrush" TargetName="border" Value="#FF00E4FF"/>
+						</Trigger>
+						<Trigger Property="HasContent" Value="true">
+							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+							<Setter Property="Padding" Value="4,0,0,0"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="RadioButtonStyleScreen1" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Background" Value="#F4F4F4"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border BorderBrush="#00000000" BorderThickness="1" Background="#00000000">
+						<Grid>
+							<Rectangle x:Name="rectangle" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Fill" TargetName="rectangle" Value="#FF00E4FF"/>
+						</Trigger>
+						<Trigger Property="HasContent" Value="true">
+							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+							<Setter Property="Padding" Value="4,0,0,0"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="RadioButtonStyleScreen4" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Background" Value="#F4F4F4"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border BorderBrush="#00000000" BorderThickness="1" Background="#00000000">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto"/>
+							<Rectangle x:Name="rectangle_Copy" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1"/>
+							<Rectangle x:Name="rectangle_Copy1" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy2" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="1"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Fill" TargetName="rectangle" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy1" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy2" Value="#FF00E4FF"/>
+						</Trigger>
+						<Trigger Property="HasContent" Value="true">
+							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+							<Setter Property="Padding" Value="4,0,0,0"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="RadioButtonStyleScreen9" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Background" Value="#F4F4F4"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border BorderBrush="#00000000" BorderThickness="1" Background="#00000000">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto"/>
+							<Rectangle x:Name="rectangle_Copy" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.ColumnSpan="1"/>
+							<Rectangle x:Name="rectangle_Copy1" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="0" Grid.RowSpan="1" Grid.Column="2"/>
+							<Rectangle x:Name="rectangle_Copy2" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+							<Rectangle x:Name="rectangle_Copy3" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy4" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy5" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy6" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy7" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="2"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Fill" TargetName="rectangle" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy1" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy2" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy3" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy4" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy5" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy6" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy7" Value="#FF00E4FF"/>
+						</Trigger>
+						<Trigger Property="HasContent" Value="true">
+							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+							<Setter Property="Padding" Value="4,0,0,0"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="RadioButtonStyleScreen16" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="Background" Value="#F4F4F4"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border BorderBrush="#00000000" BorderThickness="1" Background="#00000000">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto"/>
+							<Rectangle x:Name="rectangle_Copy" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.ColumnSpan="1"/>
+							<Rectangle x:Name="rectangle_Copy1" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="0" Grid.RowSpan="1" Grid.Column="2"/>
+							<Rectangle x:Name="rectangle_Copy2" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+							<Rectangle x:Name="rectangle_Copy3" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy4" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy5" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy6" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy7" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy8" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="3" Grid.Row="0"/>
+							<Rectangle x:Name="rectangle_Copy9" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="3" Grid.Row="1"/>
+							<Rectangle x:Name="rectangle_Copy10" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="3" Grid.Row="2"/>
+							<Rectangle x:Name="rectangle_Copy11" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="0" Grid.Row="3"/>
+							<Rectangle x:Name="rectangle_Copy12" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Grid.Row="3"/>
+							<Rectangle x:Name="rectangle_Copy13" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="3"/>
+							<Rectangle x:Name="rectangle_Copy14" Fill="#FF1BB4DE" Margin="1" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="3" Grid.Row="3"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Fill" TargetName="rectangle" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy1" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy2" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy3" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy4" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy5" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy6" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy7" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy8" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy9" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy10" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy11" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy12" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy13" Value="#FF00E4FF"/>
+							<Setter Property="Fill" TargetName="rectangle_Copy14" Value="#FF00E4FF"/>
 						</Trigger>
 						<Trigger Property="HasContent" Value="true">
 							<Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>

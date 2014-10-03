@@ -83,6 +83,12 @@
     <Compile Include="UserControl\UCRT1.xaml.cs">
       <DependentUpon>UCRT1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UCRT2.xaml.cs">
+      <DependentUpon>UCRT2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCSmallScreen.xaml.cs">
+      <DependentUpon>UCSmallScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCTractBar.xaml.cs">
       <DependentUpon>UCTractBar.xaml</DependentUpon>
     </Compile>
@@ -138,6 +144,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControl\UCRT1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCRT2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCSmallScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

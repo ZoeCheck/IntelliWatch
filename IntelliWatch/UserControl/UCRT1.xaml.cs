@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace IntelliWatch
 {
@@ -15,6 +16,10 @@ namespace IntelliWatch
 		private Storyboard stortyBoardShowDate;
 		private Storyboard stortyBoardHideDate;
 		private bool isShow = false;
+		private double cameraMinLeft;
+		private double cameraMaxLeft;
+		private double cameraMinTop;
+		private double cameraMaxTop;
 
 		public UCRT1()
 		{
@@ -96,6 +101,74 @@ namespace IntelliWatch
 			if (!DesignerProperties.GetIsInDesignMode(this))
 			{
 				InitBackImg();
+			}
+		}
+
+		private void ShowCameraControl(double left, double top)
+		{
+			UCCamera.Visibility = System.Windows.Visibility.Visible;
+			UCCamera.Margin = new Thickness(left, top, 0, 0);
+			Grid.SetRow(UCCamera, 0);
+			Grid.SetColumn(UCCamera, 1);
+			Grid.SetRowSpan(UCCamera, 1);
+			Grid.SetColumnSpan(UCCamera, 1);
+		}
+
+		private void HideCameraControl()
+		{
+			if ((bool)UCCamera.chbShow.IsChecked)
+			{
+				UCCamera.chbShow.IsChecked = false;
+				UCCamera.Visibility = System.Windows.Visibility.Hidden;
+			}
+		}
+
+		private void UserControl_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+		{
+			if (e.RightButton == System.Windows.Input.MouseButtonState.Pressed)
+			{
+				Point mousePoint = Mouse.GetPosition(LayoutRoot);
+				double right = this.ActualWidth - 215;//右侧显示极限
+				double bottom = this.ActualHeight - 270;//下侧显示极限
+				if (mousePoint.X <= 10)
+				{
+					mousePoint.X = 10;
+				}
+				if (mousePoint.X >= right)
+				{
+					return;
+				}
+				if (mousePoint.Y >= bottom)
+				{
+					mousePoint.Y = bottom;
+				}
+
+				//ShowCameraControl(-(this.ActualWidth - 215 - mousePoint.X + 70), mousePoint.Y - 40);
+				ShowCameraControl(-(this.ActualWidth - 215 - mousePoint.X), mousePoint.Y);
+				//ShowCameraControl(mousePoint.X, mousePoint.Y);
+
+				cameraMinLeft = mousePoint.X - 12;
+				cameraMaxLeft = mousePoint.X + 260;
+				cameraMinTop = mousePoint.Y;
+				cameraMaxTop = mousePoint.Y + 260 + 12;
+			}
+		}
+
+		private void LayoutRoot_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			Point mousePoint = Mouse.GetPosition(LayoutRoot);
+			{
+				if (mousePoint.X < cameraMinLeft || mousePoint.X > cameraMaxLeft)
+				{
+					HideCameraControl();
+				}
+
+				if (mousePoint.Y < cameraMinTop || mousePoint.Y > cameraMaxTop)
+				{
+					UCCamera.Visibility = System.Windows.Visibility.Hidden;
+					HideCameraControl();
+
+				}
 			}
 		}
 	}

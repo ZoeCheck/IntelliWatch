@@ -8,51 +8,15 @@
              x:Name="UserControl"
              d:DesignWidth="640"
              d:DesignHeight="480"
-             Loaded="UserControl_Loaded">
+             Loaded="UserControl_Loaded"
+             PreviewMouseDown="UserControl_PreviewMouseDown">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot"
+          PreviewMouseLeftButtonDown="LayoutRoot_PreviewMouseLeftButtonDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="215" />
         </Grid.ColumnDefinitions>
-        <Border BorderThickness="1"
-                Margin="5,5,0,0"
-                CornerRadius="5">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="80"/>
-                </Grid.RowDefinitions>
-                <Border BorderBrush="#0082B3E7" BorderThickness="1" CornerRadius="2">
-                	<Grid Margin="0">
-                		<Grid.ColumnDefinitions>
-                			<ColumnDefinition />
-                			<ColumnDefinition />
-                		</Grid.ColumnDefinitions>
-                		<Grid.RowDefinitions>
-                			<RowDefinition />
-                			<RowDefinition />
-                		</Grid.RowDefinitions>
-                		<RadioButton x:Name="r1" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}">
-                			<local:UCMainPage/>
-                		</RadioButton>
-                		<RadioButton x:Name="r2" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1">
-                			<local:UCMainPage/>
-                		</RadioButton>
-                		<RadioButton x:Name="r3" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Row="1">
-                			<local:UCMainPage/>
-                		</RadioButton>
-                		<RadioButton x:Name="r4" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" Grid.Row="1" Margin="0">
-                			<local:UCMainPage/>
-                		</RadioButton>
-                	</Grid>
-                </Border>
-                <local:UCTractBar Margin="0" Grid.Row="1"/>
-            </Grid>
-        </Border>
         <Border BorderThickness="1"
                 Grid.Column="1"
                 Margin="5,0">
@@ -211,6 +175,44 @@
                               ScrollViewer.VerticalScrollBarVisibility="Auto" />
             </StackPanel>
         </Border>
-        <local:UCControlCamera Margin="112,64,53,156"/>
+        <Border BorderThickness="1"
+                Margin="5,5,0,0"
+                CornerRadius="5">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition />
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition />
+        			<RowDefinition Height="80"/>
+        		</Grid.RowDefinitions>
+        		<Border BorderBrush="#0082B3E7" BorderThickness="1" CornerRadius="2">
+        			<Grid Margin="0">
+        				<Grid.ColumnDefinitions>
+        					<ColumnDefinition />
+        					<ColumnDefinition />
+        				</Grid.ColumnDefinitions>
+        				<Grid.RowDefinitions>
+        					<RowDefinition />
+        					<RowDefinition />
+        				</Grid.RowDefinitions>
+        				<RadioButton x:Name="r1" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}">
+        					<local:UCMainPage/>
+        				</RadioButton>
+        				<RadioButton x:Name="r2" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1">
+        					<local:UCMainPage/>
+        				</RadioButton>
+        				<RadioButton x:Name="r3" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Row="1">
+        					<local:UCMainPage/>
+        				</RadioButton>
+        				<RadioButton x:Name="r4" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" Grid.Row="1" Margin="0">
+        					<local:UCMainPage/>
+        				</RadioButton>
+        			</Grid>
+        		</Border>
+        		<local:UCTractBar Margin="0" Grid.Row="1"/>
+        	</Grid>
+        </Border>
+        <local:UCControlCamera x:Name="UCCamera" Margin="-16,100,0,0" d:LayoutOverrides="Width" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Background="#00C06110" Visibility="Hidden"/>
     </Grid>
 </UserControl>
