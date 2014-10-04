@@ -68,6 +68,9 @@
     <Compile Include="DateModel.cs" />
     <Compile Include="DayModel.cs" />
     <Compile Include="DayStruct.cs" />
+    <Compile Include="UserControl\UCAddComputer.xaml.cs">
+      <DependentUpon>UCAddComputer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCBottomComputer.xaml.cs">
       <DependentUpon>UCBottomComputer.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\TreevViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCAddComputer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

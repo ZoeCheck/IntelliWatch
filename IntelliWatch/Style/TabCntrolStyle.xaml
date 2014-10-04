@@ -392,26 +392,19 @@
 				<ControlTemplate TargetType="{x:Type TabItem}">
 					<Grid SnapsToDevicePixels="true">
 						<Path x:Name="path" Data="M0.5,21.336667 L0.5,3.0624999 C0.60265336,1.5209846 1.6143149,0.69157921 3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 73.648906,21.242842" Fill="Transparent" Margin="0,0,-9.125,0.002" Stretch="Fill" Stroke="#FF82B3E7" StrokeThickness="1" Visibility="Visible"/>
-						<Ellipse x:Name="ellipse" Margin="15.542,7.25,31.958,6.75" Stroke="#FF00F6F9" StrokeThickness="0" Visibility="Hidden">
-							<Ellipse.Fill>
-								<RadialGradientBrush>
-									<GradientStop Color="White" Offset="0.44"/>
-									<GradientStop Color="#FF036AC6" Offset="1"/>
-								</RadialGradientBrush>
-							</Ellipse.Fill>
-						</Ellipse>
+						<Path x:Name="path_Copy" Data="M3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 72.868631,19.758701" Fill="Transparent" Margin="3.941,0,-8.766,0.61" Stretch="Fill" StrokeThickness="1" Visibility="Visible" Stroke="#FF82B3E7"/>
 						<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Padding="{TemplateBinding Padding}">
 							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>
 					</Grid>
 					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="true"/>
 						<Trigger Property="IsSelected" Value="true">
 							<Setter Property="Panel.ZIndex" Value="1"/>
 							<Setter Property="Visibility" TargetName="path" Value="Visible"/>
 							<Setter Property="Fill" TargetName="path" Value="White"/>
 							<Setter Property="Stroke" TargetName="path" Value="#0082B3E7"/>
 							<Setter Property="StrokeThickness" TargetName="path" Value="0"/>
+							<Setter Property="Visibility" TargetName="path_Copy" Value="Hidden"/>
 						</Trigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -419,7 +412,7 @@
 								<Condition Property="IsMouseOver" Value="true"/>
 							</MultiTrigger.Conditions>
 							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource TabItemHotBorderBrush}"/>
-							<Setter Property="Visibility" TargetName="ellipse" Value="Visible"/>
+							<Setter Property="Fill" TargetName="path_Copy" Value="#7FCAD9E9"/>
 						</MultiTrigger>
 						<Trigger Property="TabStripPlacement" Value="Bottom">
 							<Setter Property="BorderThickness" TargetName="Bd" Value="1,0,1,1"/>
@@ -486,14 +479,6 @@
 					<Grid SnapsToDevicePixels="true">
 						<Path x:Name="path" Data="M0.5,21.336667 L0.5,3.0624999 C0.60265336,1.5209846 1.6143149,0.69157921 3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 73.741728,21.164486" Fill="Transparent" Margin="0,0,-9.25,0.001" Stretch="Fill" StrokeThickness="1" Visibility="Visible" Stroke="#FF82B3E7"/>
 						<Path x:Name="path_Copy" Data="M3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 72.868631,19.758701" Fill="Transparent" Margin="3.941,0,-8.078,1.81" Stretch="Fill" StrokeThickness="1" Visibility="Hidden" Stroke="#FF82B3E7"/>
-						<Ellipse x:Name="ellipse" Margin="26.042,6,21.458,8" Stroke="#FF00F6F9" StrokeThickness="0" Visibility="Hidden">
-							<Ellipse.Fill>
-								<RadialGradientBrush>
-									<GradientStop Color="White" Offset="0.44"/>
-									<GradientStop Color="#FF036AC6" Offset="1"/>
-								</RadialGradientBrush>
-							</Ellipse.Fill>
-						</Ellipse>
 						<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Padding="{TemplateBinding Padding}">
 							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>
@@ -517,7 +502,7 @@
 								<Condition Property="IsMouseOver" Value="true"/>
 							</MultiTrigger.Conditions>
 							<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource TabItemHotBorderBrush}"/>
-							<Setter Property="Visibility" TargetName="ellipse" Value="Visible"/>
+							<Setter Property="Fill" TargetName="path_Copy" Value="#7FCAD9E9"/>
 						</MultiTrigger>
 						<Trigger Property="TabStripPlacement" Value="Bottom">
 							<Setter Property="BorderThickness" TargetName="Bd" Value="1,0,1,1"/>

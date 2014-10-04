@@ -21,6 +21,9 @@ namespace IntelliWatch
 	public partial class UCBottomComputer : UserControl, INotifyPropertyChanged
 	{
 		Storyboard sbMain;
+		Storyboard sbShow;
+		Storyboard sbHide;
+		private bool IsOpenButtons = false;//按钮组是否已打开,没打开则切换的时候无需播放隐藏动画
 
 		private bool _IsCheck;
 
@@ -38,7 +41,12 @@ namespace IntelliWatch
 				}
 				else
 				{
-					BorderMain.Visibility = System.Windows.Visibility.Collapsed;
+					//BorderMain.Visibility = System.Windows.Visibility.Collapsed;
+					if (IsOpenButtons)
+					{
+						sbHide.Begin();
+						IsOpenButtons = false;
+					}
 					sbMain.Stop();
 					rectangle.Visibility = System.Windows.Visibility.Hidden;
 				}
@@ -64,6 +72,8 @@ namespace IntelliWatch
 			this.DataContext = this;
 			CPUName = "线路1";
 			sbMain = this.FindResource("StoryboardSelected") as Storyboard;
+			sbShow = this.FindResource("StoryboardShow") as Storyboard;
+			sbHide = this.FindResource("StoryboardHide") as Storyboard;
 		}
 
 		private void btn_MouseEnter(object sender, MouseEventArgs e)
@@ -82,13 +92,17 @@ namespace IntelliWatch
 		{
 			if (IsCheck)
 			{
-				BorderMain.Visibility = System.Windows.Visibility.Visible;
+				//BorderMain.Visibility = System.Windows.Visibility.Visible;
+				sbShow.Begin();
+				IsOpenButtons = true;
 			}
 		}
 
 		private void btnDelete_Click(object sender, RoutedEventArgs e)
 		{
-			BorderMain.Visibility = System.Windows.Visibility.Collapsed;
+			//BorderMain.Visibility = System.Windows.Visibility.Collapsed;
+			sbHide.Begin();
+			IsOpenButtons = false;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;

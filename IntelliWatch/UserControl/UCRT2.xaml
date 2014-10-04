@@ -62,117 +62,124 @@
                                             Margin="0" />
                     </StackPanel>
                 </Border>
-                <TreeView Style="{DynamicResource TreeViewStyleMain}"
-                          Background="{x:Null}"
-                          BorderBrush="#FF88AAAF"
-                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                          Margin="0,2,0,0">
-                    <TreeViewItem Header="新北区"
-                                  IsExpanded="True"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  Foreground="White">
-                        <TreeViewItem Header="长江路黄河西路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2,5,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="黄河西路长江路东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="武汉长沙路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="省人民大学附属一中"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="环太平洋南路北景区"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="北直街太湖东路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="人民路太湖中路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="景林西路北直街"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                    <TreeViewItem Header="钟楼区"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  IsExpanded="True"
-                                  Foreground="White">
-                        <TreeViewItem Header="区政府钟楼广场"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="火车站东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="省人民大学附属一中"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="人民路太湖中路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="环太平洋南路北景区"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="武汉长沙路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                    <TreeViewItem Header="武进区"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  IsExpanded="True"
-                                  Foreground="White">
-                        <TreeViewItem Header="中吴大道南洋大桥"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="长江路黄河西路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2,5,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="黄河西路长江路东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="北直街太湖东路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="景林西路北直街"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                </TreeView>
-                <ScrollViewer Margin="0"
-                              ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                <TabControl Margin="0" Background="{x:Null}">
+                	<TabItem Header="一号控点" Width="90" Style="{DynamicResource TabItemStyleSecondLevel}" Margin="-2.001,-2,2,-1">
+                		<Grid>
+                			<TreeView Style="{DynamicResource TreeViewStyleMain}"
+                				Background="{x:Null}"
+                				BorderBrush="#FF88AAAF"
+                				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                				Margin="0" d:LayoutOverrides="Height" BorderThickness="0">
+                				<TreeViewItem Header="新北区"
+                					IsExpanded="True"
+                					Style="{DynamicResource TreeViewItemStyleMain}"
+                					Foreground="White">
+                					<TreeViewItem Header="长江路黄河西路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2,5,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="黄河西路长江路东侧"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="武汉长沙路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="局前街第一人民医院"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="省人民大学附属一中"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="环太平洋南路北景区"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="北直街太湖东路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="人民路太湖中路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="景林西路北直街"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                				</TreeViewItem>
+                				<TreeViewItem Header="钟楼区"
+                					Style="{DynamicResource TreeViewItemStyleMain}"
+                					IsExpanded="True"
+                					Foreground="White">
+                					<TreeViewItem Header="区政府钟楼广场"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="火车站东侧"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="局前街第一人民医院"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="省人民大学附属一中"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="人民路太湖中路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="环太平洋南路北景区"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="武汉长沙路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                				</TreeViewItem>
+                				<TreeViewItem Header="武进区"
+                					Style="{DynamicResource TreeViewItemStyleMain}"
+                					IsExpanded="True"
+                					Foreground="White">
+                					<TreeViewItem Header="中吴大道南洋大桥"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="长江路黄河西路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2,5,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="黄河西路长江路东侧"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="北直街太湖东路"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="局前街第一人民医院"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                					<TreeViewItem Header="景林西路北直街"
+                						Style="{DynamicResource TreeViewItemStyleSecond}"
+                						Margin="0,2"
+                						Foreground="White" />
+                				</TreeViewItem>
+                			</TreeView>
+                		</Grid>
+                	</TabItem>
+                	<TabItem Header="二号控点" Width="90" Style="{DynamicResource TabItemStyleSecondLevel2}" Margin="-18.178,-2,18.177,-1">
+                		<Grid/>
+                	</TabItem>
+                </TabControl>
             </StackPanel>
         </Border>
         <Border BorderThickness="1"
@@ -388,52 +395,79 @@
                         </RadioButton>
                     </Grid>
                 </Border>
-                <StackPanel Margin="0"
-                            Grid.Row="1"
-                            Orientation="Horizontal">
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc1}">
-                        <local:UCBottomComputer x:Name="uc1"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc2}">
-                        <local:UCBottomComputer x:Name="uc2"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc3}">
-                        <local:UCBottomComputer x:Name="uc3"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc4}">
-                        <local:UCBottomComputer x:Name="uc4"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc5}">
-                        <local:UCBottomComputer x:Name="uc5"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
-                                 Margin="0,0,20,0"
-                                 IsChecked="{Binding IsCheck,ElementName=uc6}">
-                        <local:UCBottomComputer x:Name="uc6"
-                                                Margin="0"
-                                                HorizontalAlignment="Left" />
-                    </RadioButton>
-                </StackPanel>
+                <Grid Grid.Row="1">
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition/>
+                		<ColumnDefinition Width="Auto"/>
+                	</Grid.ColumnDefinitions>
+                	<StackPanel Margin="0"
+                		Orientation="Horizontal">
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc1}">
+                			<local:UCBottomComputer x:Name="uc1"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc2}">
+                			<local:UCBottomComputer x:Name="uc2"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc3}">
+                			<local:UCBottomComputer x:Name="uc3"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc4}">
+                			<local:UCBottomComputer x:Name="uc4"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc5}">
+                			<local:UCBottomComputer x:Name="uc5"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc6}">
+                			<local:UCBottomComputer x:Name="uc6"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc7}">
+                			<local:UCBottomComputer x:Name="uc7"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc8}">
+                			<local:UCBottomComputer x:Name="uc8"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                		<RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                			Margin="0,0,20,0"
+                			IsChecked="{Binding IsCheck, ElementName=uc9}">
+                			<local:UCBottomComputer x:Name="uc9"
+                				Margin="0"
+                				HorizontalAlignment="Left" />
+                		</RadioButton>
+                	</StackPanel>
+                	<local:UCAddComputer Grid.Column="1" Margin="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </Grid>
             </Grid>
         </Border>
     </Grid>

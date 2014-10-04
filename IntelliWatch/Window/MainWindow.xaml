@@ -31,11 +31,12 @@
                 <Grid Margin="0">
                     <TabControl Margin="-6.496,-27,-6.011,0"
                                 Background="{x:Null}"
-                                BorderBrush="{x:Null}">
+                                BorderBrush="{x:Null}"
+                                SelectionChanged="TabControl_SelectionChanged">
                         <TabItem Header="全景视频"
                                  Style="{DynamicResource TabItemStyleSecondLevel}"
                                  Width="90"
-                                 Margin="0.672,-2,-0.673,-1">
+                                 Margin="0.672,-2,-0.673,-1" Foreground="White">
                             <Grid>
                                 <local:UCRT1 Margin="0"
                                              d:LayoutOverrides="Height" />
@@ -44,7 +45,7 @@
                         <TabItem Header="特殊地区"
                                  Width="90"
                                  Margin="-15.077,-2,15.076,-1"
-                                 Style="{DynamicResource TabItemStyleSecondLevel2}">
+                                 Style="{DynamicResource TabItemStyleSecondLevel2}" Foreground="White">
                         	<Grid>
                         		<local:UCRT2 Margin="0"/>
                         	</Grid>
@@ -52,28 +53,19 @@
                         <TabItem Header="十字路口"
                                  Width="90"
                                  Margin="-32.215,-2,32.214,-1"
-                                 Style="{DynamicResource TabItemStyleSecondLevel2}">
-                            <Grid Background="#FF07894B">
-                                <local:UCTractBar Margin="0"
-                                                  VerticalAlignment="Bottom"
-                                                  RenderTransformOrigin="0.5,0.5">
-                                    <local:UCTractBar.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform />
-                                            <SkewTransform />
-                                            <RotateTransform />
-                                            <TranslateTransform Y="4" />
-                                        </TransformGroup>
-                                    </local:UCTractBar.RenderTransform>
-                                </local:UCTractBar>
+                                 Style="{DynamicResource TabItemStyleSecondLevel2}" Foreground="White">
+                            <Grid>
+                            	<local:UCRT1 Margin="0"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="局部线路"
                                  Width="90"
                                  Margin="-48.046,-2,0,-1"
                                  HorizontalAlignment="Left"
-                                 Style="{DynamicResource TabItemStyleSecondLevel2}">
-                            <Grid Background="#FF8243B8" />
+                                 Style="{DynamicResource TabItemStyleSecondLevel2}" Foreground="White">
+                            <Grid >
+                            	<local:UCRT2 Margin="0"/>
+                            </Grid>
                         </TabItem>
                     </TabControl>
                 </Grid>

@@ -25,5 +25,27 @@ namespace IntelliWatch
 			//WindowTest wt = new WindowTest();
 			//wt.ShowDialog();
 		}
+
+		private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			TabItem tiNew = null;
+			TabItem tiOld = null;
+			if (e.AddedItems.Count > 0)
+			{
+				tiNew = e.AddedItems[0] as TabItem;
+			}
+			if (e.RemovedItems.Count > 0)
+			{
+				tiOld = e.RemovedItems[0] as TabItem;
+			}
+			if (tiNew != null)
+			{
+				tiNew.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 120));
+			}
+			if (tiOld != null)
+			{
+				tiOld.Foreground = new SolidColorBrush(Colors.White);
+			}
+		}
 	}
 }

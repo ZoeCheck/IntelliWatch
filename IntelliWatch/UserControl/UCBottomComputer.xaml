@@ -22,12 +22,24 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="19"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="StoryboardShow">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="BorderMain">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="52"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StoryboardHide">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="BorderMain">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="52"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot"
           Background="#000B9126">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition/>
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -91,8 +103,7 @@
                 HorizontalAlignment="Center"
                 BorderBrush="#FF00E4FF"
                 BorderThickness="1"
-                CornerRadius="2"
-                Visibility="Collapsed">
+                CornerRadius="2" Width="0">
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
@@ -117,7 +128,7 @@
                         x:Name="btnDelete"
                         MouseLeave="btn_MouseLeave"
                         MouseEnter="btn_MouseEnter"
-                        Click="btnDelete_Click" />
+                        Click="btnDelete_Click" Width="50" />
             </StackPanel>
         </Border>
     </Grid>
