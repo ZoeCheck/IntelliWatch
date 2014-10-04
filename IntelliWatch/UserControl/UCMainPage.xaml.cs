@@ -10,17 +10,37 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Windows.Media.Animation;
 
 namespace IntelliWatch
 {
 	/// <summary>
 	/// UCMainPage.xaml 的交互逻辑
 	/// </summary>
-	public partial class UCMainPage : UserControl
+	public partial class UCMainPage : UserControl, INotifyPropertyChanged
 	{
+		Storyboard sbShow;
+		Storyboard sbHide;
+
+		private bool _IsChecked;
+
+		public bool IsChecked
+		{
+			get { return _IsChecked; }
+			set
+			{
+				_IsChecked = value;
+				RaisePropertyChanged("IsChecked");
+			}
+		}
+
 		public UCMainPage()
 		{
 			this.InitializeComponent();
+			this.DataContext = this;
+			sbShow = this.FindResource("StoryboardShow") as Storyboard;
+			sbHide = this.FindResource("StoryboardHide") as Storyboard;
 		}
 
 		public void SetBackImg(string path)
@@ -30,23 +50,29 @@ namespace IntelliWatch
 			this.BorderMain.Background = mapBrush;
 		}
 
-		private void UserControl_Loaded(object sender, RoutedEventArgs e)
-		{
-			//ContextMenu cmMain = new ContextMenu();
-			//cmMain.Items.Add(new UCControlCamera());
-			//this.ContextMenu = cmMain;
+		public event PropertyChangedEventHandler PropertyChanged;
 
-			//Style st = this.FindResource("MyContextMenu") as Style;
-			//cmMain.Style = st;
-			//Style stItem = this.FindResource("MyMenuItem") as Style;
+		public void RaisePropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 
-		private void UserControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+		private void ucBottom_MouseEnter(object sender, MouseEventArgs e)
 		{
-			if (e.RightButton == MouseButtonState.Pressed)
+			if (IsChecked)
 			{
-				//UCCC.Visibility = System.Windows.Visibility.Visible;
+				sbShow.Begin();
+			}
+		}
 
+		private void ucBottom_MouseLeave(object sender, MouseEventArgs e)
+		{
+			if (IsChecked)
+			{
+				sbHide.Begin();
 			}
 		}
 	}

@@ -21,7 +21,8 @@
                 Grid.Column="1"
                 Margin="5,0">
             <StackPanel Orientation="Vertical"
-                        d:LayoutOverrides="Width, Height" Margin="0,5,0,0">
+                        d:LayoutOverrides="Width, Height"
+                        Margin="0,5,0,0">
                 <TextBox Margin="0,0,0,2"
                          TextWrapping="Wrap"
                          Text="输入关键字"
@@ -54,11 +55,13 @@
                             <TextBox Grid.Column="1"
                                      Margin="0"
                                      TextWrapping="Wrap"
-                                     Text="{Binding SelectDate,ElementName=ucDatePicker}" Style="{DynamicResource TextBoxStyleDate}" Foreground="White" />
+                                     Text="{Binding SelectDate,ElementName=ucDatePicker}"
+                                     Style="{DynamicResource TextBoxStyleDate}"
+                                     Foreground="White" />
                         </Grid>
                         <local:UCDatePicker x:Name="ucDatePicker"
                                             Height="0"
-                                            Margin="0"/>
+                                            Margin="0" />
                     </StackPanel>
                 </Border>
                 <TreeView Style="{DynamicResource TreeViewStyleMain}"
@@ -121,25 +124,25 @@
                                       Margin="0,2"
                                       Foreground="White" />
                         <TreeViewItem Header="局前街第一人民医院"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="省人民大学附属一中"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="人民路太湖中路"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="环太平洋南路北景区"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="武汉长沙路"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                     </TreeViewItem>
                     <TreeViewItem Header="武进区"
                                   Style="{DynamicResource TreeViewItemStyleMain}"
@@ -150,25 +153,25 @@
                                       Margin="0,2"
                                       Foreground="White" />
                         <TreeViewItem Header="长江路黄河西路"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2,5,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2,5,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="黄河西路长江路东侧"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="北直街太湖东路"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="局前街第一人民医院"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                         <TreeViewItem Header="景林西路北直街"
-                        	Style="{DynamicResource TreeViewItemStyleSecond}"
-                        	Margin="0,2"
-                        	Foreground="White" />
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
                     </TreeViewItem>
                 </TreeView>
                 <ScrollViewer Margin="0"
@@ -178,41 +181,67 @@
         <Border BorderThickness="1"
                 Margin="5,5,0,0"
                 CornerRadius="5">
-        	<Grid>
-        		<Grid.ColumnDefinitions>
-        			<ColumnDefinition />
-        		</Grid.ColumnDefinitions>
-        		<Grid.RowDefinitions>
-        			<RowDefinition />
-        			<RowDefinition Height="80"/>
-        		</Grid.RowDefinitions>
-        		<Border BorderBrush="#0082B3E7" BorderThickness="1" CornerRadius="2">
-        			<Grid Margin="0">
-        				<Grid.ColumnDefinitions>
-        					<ColumnDefinition />
-        					<ColumnDefinition />
-        				</Grid.ColumnDefinitions>
-        				<Grid.RowDefinitions>
-        					<RowDefinition />
-        					<RowDefinition />
-        				</Grid.RowDefinitions>
-        				<RadioButton x:Name="r1" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}">
-        					<local:UCMainPage/>
-        				</RadioButton>
-        				<RadioButton x:Name="r2" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1">
-        					<local:UCMainPage/>
-        				</RadioButton>
-        				<RadioButton x:Name="r3" Margin="0" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Row="1">
-        					<local:UCMainPage/>
-        				</RadioButton>
-        				<RadioButton x:Name="r4" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" Grid.Row="1" Margin="0">
-        					<local:UCMainPage/>
-        				</RadioButton>
-        			</Grid>
-        		</Border>
-        		<local:UCTractBar Margin="0" Grid.Row="1"/>
-        	</Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#0082B3E7"
+                        BorderThickness="1"
+                        CornerRadius="2">
+                    <Grid Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <RadioButton x:Name="r1"
+                                     IsChecked="{Binding IsChecked,ElementName=u1}"
+                                     Margin="0"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}">
+                            <local:UCMainPage x:Name="u1" />
+                        </RadioButton>
+                        <RadioButton x:Name="r2"
+                                     IsChecked="{Binding IsChecked,ElementName=u2}"
+                                     Margin="0"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="1">
+                            <local:UCMainPage x:Name="u2" />
+                        </RadioButton>
+                        <RadioButton x:Name="r3"
+                                     IsChecked="{Binding IsChecked,ElementName=u3}"
+                                     Margin="0"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Row="1">
+                            <local:UCMainPage x:Name="u3" />
+                        </RadioButton>
+                        <RadioButton x:Name="r4"
+                                     IsChecked="{Binding IsChecked,ElementName=u4}"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="1"
+                                     Grid.Row="1"
+                                     Margin="0">
+                            <local:UCMainPage x:Name="u4" />
+                        </RadioButton>
+                    </Grid>
+                </Border>
+                <local:UCTractBar Margin="0"
+                                  Grid.Row="1" />
+            </Grid>
         </Border>
-        <local:UCControlCamera x:Name="UCCamera" Margin="-16,100,0,0" d:LayoutOverrides="Width" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Background="#00C06110" Visibility="Hidden"/>
+        <local:UCControlCamera x:Name="UCCamera"
+                               Margin="-16,100,0,0"
+                               d:LayoutOverrides="Width"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Grid.Column="1"
+                               Background="#00C06110"
+                               Visibility="Hidden" />
     </Grid>
 </UserControl>

@@ -68,6 +68,9 @@
     <Compile Include="DateModel.cs" />
     <Compile Include="DayModel.cs" />
     <Compile Include="DayStruct.cs" />
+    <Compile Include="UserControl\UCBottomComputer.xaml.cs">
+      <DependentUpon>UCBottomComputer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCCameraBottomControl.xaml.cs">
       <DependentUpon>UCCameraBottomControl.xaml</DependentUpon>
     </Compile>
@@ -115,15 +118,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Style\TextBoxStyleSearch.xaml">
+    <Page Include="Style\TextBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Style\TractBarStyle.xaml">
+    <Page Include="Style\TrackBarStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\TreevViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\UCBottomComputer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

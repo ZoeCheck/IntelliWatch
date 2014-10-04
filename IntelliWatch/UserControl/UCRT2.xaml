@@ -1,282 +1,440 @@
-﻿<UserControl
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	xmlns:local="clr-namespace:IntelliWatch"
-	mc:Ignorable="d"
-	x:Class="IntelliWatch.UCRT2"
-	x:Name="UserControl"
-	d:DesignWidth="816" d:DesignHeight="464" Width="Auto" Height="Auto">
-	<Grid x:Name="LayoutRoot_Copy"
-		Margin="0">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition />
-			<ColumnDefinition Width="215" />
-		</Grid.ColumnDefinitions>
-		<Border BorderThickness="1"
-			Grid.Column="1"
-			Margin="5,0">
-			<StackPanel Orientation="Vertical"
-				d:LayoutOverrides="Width, Height"
-				Margin="0,5,0,0">
-				<TextBox Margin="0,0,0,2"
-					TextWrapping="Wrap"
-					Text="输入关键字"
-					Style="{DynamicResource TextBoxStyleSearch}"
-					Foreground="White" />
-				<Border BorderBrush="#FF81B2E6"
-					BorderThickness="1"
-					Margin="0,2"
-					CornerRadius="2">
-					<StackPanel Orientation="Vertical"
-						d:LayoutOverrides="Height">
-						<Grid Height="22">
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="53.618" />
-								<ColumnDefinition />
-								<ColumnDefinition Width="25" />
-							</Grid.ColumnDefinitions>
-							<Button Content="Button"
-								Grid.Column="2"
-								Margin="0"
-								x:Name="btnOpenDatePicker"
-								Style="{DynamicResource ButtonStyleOpenDatePicker}" />
-							<TextBlock Margin="0"
-								TextWrapping="Wrap"
-								HorizontalAlignment="Center"
-								VerticalAlignment="Center"
-								Foreground="White"><Run Language="zh-cn"
-									Text="选择日期" /></TextBlock>
-							<TextBox Grid.Column="1"
-								Margin="0"
-								TextWrapping="Wrap"
-								Text="{Binding SelectDate, ElementName=ucDatePicker}"
-								Style="{DynamicResource TextBoxStyleDate}"
-								Foreground="White" />
-						</Grid>
-						<local:UCDatePicker x:Name="ucDatePicker"
-							Height="0"
-							Margin="0" />
-					</StackPanel>
-				</Border>
-				<TreeView Style="{DynamicResource TreeViewStyleMain}"
-					Background="{x:Null}"
-					BorderBrush="#FF88AAAF"
-					ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-					Margin="0,2,0,0">
-					<TreeViewItem Header="新北区"
-						IsExpanded="True"
-						Style="{DynamicResource TreeViewItemStyleMain}"
-						Foreground="White">
-						<TreeViewItem Header="长江路黄河西路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2,5,2"
-							Foreground="White" />
-						<TreeViewItem Header="黄河西路长江路东侧"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="武汉长沙路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="局前街第一人民医院"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="省人民大学附属一中"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="环太平洋南路北景区"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="北直街太湖东路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="人民路太湖中路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="景林西路北直街"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-					</TreeViewItem>
-					<TreeViewItem Header="钟楼区"
-						Style="{DynamicResource TreeViewItemStyleMain}"
-						IsExpanded="True"
-						Foreground="White">
-						<TreeViewItem Header="区政府钟楼广场"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="火车站东侧"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="局前街第一人民医院"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="省人民大学附属一中"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="人民路太湖中路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="环太平洋南路北景区"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="武汉长沙路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-					</TreeViewItem>
-					<TreeViewItem Header="武进区"
-						Style="{DynamicResource TreeViewItemStyleMain}"
-						IsExpanded="True"
-						Foreground="White">
-						<TreeViewItem Header="中吴大道南洋大桥"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="长江路黄河西路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2,5,2"
-							Foreground="White" />
-						<TreeViewItem Header="黄河西路长江路东侧"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="北直街太湖东路"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="局前街第一人民医院"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-						<TreeViewItem Header="景林西路北直街"
-							Style="{DynamicResource TreeViewItemStyleSecond}"
-							Margin="0,2"
-							Foreground="White" />
-					</TreeViewItem>
-				</TreeView>
-				<ScrollViewer Margin="0"
-					ScrollViewer.VerticalScrollBarVisibility="Auto" />
-			</StackPanel>
-		</Border>
-		<Border BorderThickness="1"
-			Margin="5,5,0,0"
-			CornerRadius="5">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition />
-					<RowDefinition Height="80" />
-				</Grid.RowDefinitions>
-				<Border BorderBrush="#0082B3E7"
-					BorderThickness="1"
-					CornerRadius="2">
-					<Grid Margin="0">
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-						</Grid.ColumnDefinitions>
-						<Grid.RowDefinitions>
-							<RowDefinition Height="*" />
-							<RowDefinition Height="*" />
-							<RowDefinition Height="*" />
-							<RowDefinition Height="*" />
-						</Grid.RowDefinitions>
-						<RadioButton Margin="2" d:LayoutOverrides="Width" Style="{DynamicResource RadioButtonStyleMain4Control}">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Column="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Column="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Column="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Column="4">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Column="5">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="2" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="3" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="4" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="5" d:LayoutOverrides="Width" Grid.Row="1">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="2" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="3" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="4" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="5" d:LayoutOverrides="Width" Grid.Row="2">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="1" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="2" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="3" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="4" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-						<RadioButton Margin="2" Style="{DynamicResource RadioButtonStyleMain4Control}" Grid.Column="5" d:LayoutOverrides="Width" Grid.Row="3">
-							<local:UCSmallScreen Width="Auto" Height="Auto"/>
-						</RadioButton>
-					</Grid>
-				</Border>
-			</Grid>
-		</Border>
-	</Grid>
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:IntelliWatch"
+             mc:Ignorable="d"
+             x:Class="IntelliWatch.UCRT2"
+             x:Name="UserControl"
+             d:DesignWidth="816"
+             d:DesignHeight="464"
+             Width="Auto"
+             Height="Auto">
+    <Grid x:Name="LayoutRoot_Copy"
+          Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="215" />
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1"
+                Grid.Column="1"
+                Margin="5,0">
+            <StackPanel Orientation="Vertical"
+                        d:LayoutOverrides="Width, Height"
+                        Margin="0,5,0,0">
+                <TextBox Margin="0,0,0,2"
+                         TextWrapping="Wrap"
+                         Text="输入关键字"
+                         Style="{DynamicResource TextBoxStyleSearch}"
+                         Foreground="White" />
+                <Border BorderBrush="#FF81B2E6"
+                        BorderThickness="1"
+                        Margin="0,2"
+                        CornerRadius="2">
+                    <StackPanel Orientation="Vertical"
+                                d:LayoutOverrides="Height">
+                        <Grid Height="22">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="53.618" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="25" />
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Button"
+                                    Grid.Column="2"
+                                    Margin="0"
+                                    x:Name="btnOpenDatePicker"
+                                    Style="{DynamicResource ButtonStyleOpenDatePicker}" />
+                            <TextBlock Margin="0"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="White"><Run Language="zh-cn"
+                                                               Text="选择日期" /></TextBlock>
+                            <TextBox Grid.Column="1"
+                                     Margin="0"
+                                     TextWrapping="Wrap"
+                                     Text="{Binding SelectDate, ElementName=ucDatePicker}"
+                                     Style="{DynamicResource TextBoxStyleDate}"
+                                     Foreground="White" />
+                        </Grid>
+                        <local:UCDatePicker x:Name="ucDatePicker"
+                                            Height="0"
+                                            Margin="0" />
+                    </StackPanel>
+                </Border>
+                <TreeView Style="{DynamicResource TreeViewStyleMain}"
+                          Background="{x:Null}"
+                          BorderBrush="#FF88AAAF"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          Margin="0,2,0,0">
+                    <TreeViewItem Header="新北区"
+                                  IsExpanded="True"
+                                  Style="{DynamicResource TreeViewItemStyleMain}"
+                                  Foreground="White">
+                        <TreeViewItem Header="长江路黄河西路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2,5,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="黄河西路长江路东侧"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="武汉长沙路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="局前街第一人民医院"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="省人民大学附属一中"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="环太平洋南路北景区"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="北直街太湖东路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="人民路太湖中路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="景林西路北直街"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="钟楼区"
+                                  Style="{DynamicResource TreeViewItemStyleMain}"
+                                  IsExpanded="True"
+                                  Foreground="White">
+                        <TreeViewItem Header="区政府钟楼广场"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="火车站东侧"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="局前街第一人民医院"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="省人民大学附属一中"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="人民路太湖中路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="环太平洋南路北景区"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="武汉长沙路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="武进区"
+                                  Style="{DynamicResource TreeViewItemStyleMain}"
+                                  IsExpanded="True"
+                                  Foreground="White">
+                        <TreeViewItem Header="中吴大道南洋大桥"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="长江路黄河西路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2,5,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="黄河西路长江路东侧"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="北直街太湖东路"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="局前街第一人民医院"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                        <TreeViewItem Header="景林西路北直街"
+                                      Style="{DynamicResource TreeViewItemStyleSecond}"
+                                      Margin="0,2"
+                                      Foreground="White" />
+                    </TreeViewItem>
+                </TreeView>
+                <ScrollViewer Margin="0"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto" />
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1"
+                Margin="5,5,0,0"
+                CornerRadius="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#0082B3E7"
+                        BorderThickness="1"
+                        CornerRadius="2">
+                    <Grid Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <RadioButton Margin="2"
+                                     d:LayoutOverrides="Width"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Column="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Column="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Column="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Column="4">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Column="5">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="1"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="2"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="3"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="4"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="5"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="1">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="1"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="2"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="3"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="4"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="5"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="2">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="1"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="2"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="3"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="4"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                        <RadioButton Margin="2"
+                                     Style="{DynamicResource RadioButtonStyleMain4Control}"
+                                     Grid.Column="5"
+                                     d:LayoutOverrides="Width"
+                                     Grid.Row="3">
+                            <local:UCSmallScreen Width="Auto"
+                                                 Height="Auto" />
+                        </RadioButton>
+                    </Grid>
+                </Border>
+                <StackPanel Margin="0"
+                            Grid.Row="1"
+                            Orientation="Horizontal">
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc1}">
+                        <local:UCBottomComputer x:Name="uc1"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc2}">
+                        <local:UCBottomComputer x:Name="uc2"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc3}">
+                        <local:UCBottomComputer x:Name="uc3"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc4}">
+                        <local:UCBottomComputer x:Name="uc4"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc5}">
+                        <local:UCBottomComputer x:Name="uc5"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource RadioButtonStyleBottom}"
+                                 Margin="0,0,20,0"
+                                 IsChecked="{Binding IsCheck,ElementName=uc6}">
+                        <local:UCBottomComputer x:Name="uc6"
+                                                Margin="0"
+                                                HorizontalAlignment="Left" />
+                    </RadioButton>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
 </UserControl>

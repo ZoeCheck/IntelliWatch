@@ -1351,4 +1351,55 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	<Style x:Key="ButtonStyleModify" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="#00000000" BorderThickness="1" Background="#00004F84" RenderTransformOrigin="0.5,0.5">
+						<Border.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Border.RenderTransform>
+						<Grid>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="RenderTransform" TargetName="border">
+								<Setter.Value>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform X="1" Y="1"/>
+									</TransformGroup>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#FF004F84"/>
+						</Trigger>
+						<Trigger Property="IsKeyboardFocused" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="#ADADAD"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 </ResourceDictionary>
