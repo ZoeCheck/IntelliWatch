@@ -9,7 +9,9 @@
              d:DesignWidth="640"
              d:DesignHeight="480"
              Width="160"
-             Height="160" MinWidth="130" MinHeight="116">
+             Height="160" MinWidth="130" MinHeight="116"
+             MouseEnter="UserControl_MouseEnter"
+             MouseLeave="UserControl_MouseLeave">
     <UserControl.Resources>
         <local:BoolToVisibility x:Key="btv" />
     </UserControl.Resources>
@@ -18,7 +20,7 @@
             Background="#FF326EA0"
             CornerRadius="2">
         <Grid x:Name="LayoutRoot">
-            <StackPanel Visibility="{Binding IsChecked,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=RadioButton}, Converter={StaticResource ResourceKey=btv}}"
+            <StackPanel Visibility="{Binding IsMouseOver, Converter={StaticResource ResourceKey=btv}}"
                         Height="32"
                         Margin="0,0,0,5"
                         Orientation="Horizontal"
