@@ -148,7 +148,7 @@
         					Foreground="White" />
         			</TreeViewItem>
         			<TreeViewItem Header="武进区"
-        				Style="{DynamicResource TreeViewItemStyleMain}"
+        				Style="{DynamicResource TreeViewItemStyleLastItem}"
         				IsExpanded="True"
         				Foreground="White" Margin="0,0,0,17">
         				<TreeViewItem Header="中吴大道南洋大桥"
