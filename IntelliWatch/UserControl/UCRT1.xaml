@@ -20,161 +20,164 @@
         <Border BorderThickness="1"
                 Grid.Column="1"
                 Margin="5,0">
-            <StackPanel Orientation="Vertical"
-                        d:LayoutOverrides="Width, Height"
-                        Margin="0,5,0,0">
-                <TextBox Margin="0,0,0,2"
-                         TextWrapping="Wrap"
-                         Text="输入关键字"
-                         Style="{DynamicResource TextBoxStyleSearch}"
-                         Foreground="White" />
-                <Border BorderBrush="#FF81B2E6"
-                        BorderThickness="1"
-                        Margin="0,2"
-                        CornerRadius="2">
-                    <StackPanel Orientation="Vertical"
-                                d:LayoutOverrides="Height">
-                        <Grid Height="22">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="53.618" />
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="25" />
-                            </Grid.ColumnDefinitions>
-                            <Button Content="Button"
-                                    Grid.Column="2"
-                                    Margin="0"
-                                    x:Name="btnOpenDatePicker"
-                                    Click="btnOpenDatePicker_Click"
-                                    Style="{DynamicResource ButtonStyleOpenDatePicker}" />
-                            <TextBlock Margin="0"
-                                       TextWrapping="Wrap"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"
-                                       Foreground="White"><Run Language="zh-cn"
-                                                               Text="选择日期" /></TextBlock>
-                            <TextBox Grid.Column="1"
-                                     Margin="0"
-                                     TextWrapping="Wrap"
-                                     Text="{Binding SelectDate,ElementName=ucDatePicker}"
-                                     Style="{DynamicResource TextBoxStyleDate}"
-                                     Foreground="White" />
-                        </Grid>
-                        <local:UCDatePicker x:Name="ucDatePicker"
-                                            Height="0"
-                                            Margin="0" />
-                    </StackPanel>
-                </Border>
-                <TreeView Style="{DynamicResource TreeViewStyleMain}"
-                          Background="{x:Null}"
-                          BorderBrush="#FF88AAAF"
-                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                          Margin="0,2,0,0"
-                          SelectedItemChanged="TreeView_SelectedItemChanged">
-                    <TreeViewItem Header="新北区"
-                                  IsExpanded="True"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  Foreground="White">
-                        <TreeViewItem Header="长江路黄河西路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2,5,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="黄河西路长江路东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="武汉长沙路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="省人民大学附属一中"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="环太平洋南路北景区"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="北直街太湖东路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="人民路太湖中路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="景林西路北直街"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                    <TreeViewItem Header="钟楼区"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  IsExpanded="True"
-                                  Foreground="White">
-                        <TreeViewItem Header="区政府钟楼广场"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="火车站东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="省人民大学附属一中"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="人民路太湖中路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="环太平洋南路北景区"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="武汉长沙路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                    <TreeViewItem Header="武进区"
-                                  Style="{DynamicResource TreeViewItemStyleMain}"
-                                  IsExpanded="True"
-                                  Foreground="White">
-                        <TreeViewItem Header="中吴大道南洋大桥"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="长江路黄河西路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2,5,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="黄河西路长江路东侧"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="北直街太湖东路"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="局前街第一人民医院"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                        <TreeViewItem Header="景林西路北直街"
-                                      Style="{DynamicResource TreeViewItemStyleSecond}"
-                                      Margin="0,2"
-                                      Foreground="White" />
-                    </TreeViewItem>
-                </TreeView>
-            </StackPanel>
+            <Grid Margin="0">
+            	<Grid.RowDefinitions>
+            		<RowDefinition Height="25"/>
+            		<RowDefinition Height="Auto"/>
+            		<RowDefinition/>
+            	</Grid.RowDefinitions>
+        		<TextBox
+        			TextWrapping="Wrap"
+        			Text="输入关键字"
+        			Style="{DynamicResource TextBoxStyleSearch}"
+        			Foreground="White" Margin="0" d:LayoutOverrides="Height" />
+        		<Border BorderBrush="#FF81B2E6"
+        			BorderThickness="1"
+        			Margin="0,5"
+        			CornerRadius="2" Grid.Row="1" d:LayoutOverrides="Height">
+        			<StackPanel Orientation="Vertical"
+        				d:LayoutOverrides="Height">
+        				<Grid Height="22">
+        					<Grid.ColumnDefinitions>
+        						<ColumnDefinition Width="53.618" />
+        						<ColumnDefinition />
+        						<ColumnDefinition Width="25" />
+        					</Grid.ColumnDefinitions>
+        					<Button Content="Button"
+        						Grid.Column="2"
+        						Margin="0"
+        						x:Name="btnOpenDatePicker"
+        						Click="btnOpenDatePicker_Click"
+        						Style="{DynamicResource ButtonStyleOpenDatePicker}" />
+        					<TextBlock Margin="0"
+        						TextWrapping="Wrap"
+        						HorizontalAlignment="Center"
+        						VerticalAlignment="Center"
+        						Foreground="White"><Run Language="zh-cn"
+        							Text="选择日期" /></TextBlock>
+        					<TextBox Grid.Column="1"
+        						Margin="0"
+        						TextWrapping="Wrap"
+        						Text="{Binding SelectDate, ElementName=ucDatePicker}"
+        						Style="{DynamicResource TextBoxStyleDate}"
+        						Foreground="White" />
+        				</Grid>
+        				<local:UCDatePicker x:Name="ucDatePicker"
+        					Height="0"
+        					Margin="0" />
+        			</StackPanel>
+        		</Border>
+        		<TreeView Style="{DynamicResource TreeViewStyleMain}"
+        			Background="{x:Null}"
+        			BorderBrush="#FF88AAAF"
+        			ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        			Margin="0"
+        			SelectedItemChanged="TreeView_SelectedItemChanged" d:LayoutOverrides="Height" Grid.Row="2">
+        			<TreeViewItem Header="新北区"
+        				IsExpanded="True"
+        				Style="{DynamicResource TreeViewItemStyleMain}"
+        				Foreground="White">
+        				<TreeViewItem Header="长江路黄河西路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2,5,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="黄河西路长江路东侧"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="武汉长沙路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="局前街第一人民医院"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="省人民大学附属一中"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="环太平洋南路北景区"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="北直街太湖东路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="人民路太湖中路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="景林西路北直街"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        			</TreeViewItem>
+        			<TreeViewItem Header="钟楼区"
+        				Style="{DynamicResource TreeViewItemStyleMain}"
+        				IsExpanded="True"
+        				Foreground="White">
+        				<TreeViewItem Header="区政府钟楼广场"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="火车站东侧"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="局前街第一人民医院"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="省人民大学附属一中"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="人民路太湖中路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="环太平洋南路北景区"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="武汉长沙路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        			</TreeViewItem>
+        			<TreeViewItem Header="武进区"
+        				Style="{DynamicResource TreeViewItemStyleMain}"
+        				IsExpanded="True"
+        				Foreground="White" Margin="0,0,0,17">
+        				<TreeViewItem Header="中吴大道南洋大桥"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="长江路黄河西路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2,5,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="黄河西路长江路东侧"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="北直街太湖东路"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="局前街第一人民医院"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        				<TreeViewItem Header="景林西路北直街"
+        					Style="{DynamicResource TreeViewItemStyleSecond}"
+        					Margin="0,2"
+        					Foreground="White" />
+        			</TreeViewItem>
+        		</TreeView>
+        	</Grid>
         </Border>
         <Border BorderThickness="1"
                 Margin="5,5,0,0"
