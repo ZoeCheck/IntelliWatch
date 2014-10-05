@@ -170,6 +170,7 @@ namespace IntelliWatch
 			Year--;
 			dm.SetDayModel(Year, Month);
 			SetControlShow();
+			//Day = GetDay();
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -177,6 +178,7 @@ namespace IntelliWatch
 		{
 			Year++;
 			dm.SetDayModel(Year, Month);
+			//Day = GetDay();
 			SetControlShow();
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
@@ -185,6 +187,7 @@ namespace IntelliWatch
 		{
 			Month--;
 			dm.SetDayModel(Year, Month);
+			//Day = GetDay();
 			SetControlShow();
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
@@ -193,6 +196,7 @@ namespace IntelliWatch
 		{
 			Month++;
 			dm.SetDayModel(Year, Month);
+			//Day = GetDay();
 			SetControlShow();
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
@@ -223,6 +227,23 @@ namespace IntelliWatch
 					}
 				}
 			}
+		}
+
+		private int GetDay()
+		{
+			foreach (var item in GridRadio.Children)
+			{
+				if (item.GetType() == typeof(RadioButton))
+				{
+					if (((RadioButton)item).IsChecked == true)
+					{
+						RadioButton rbt = (RadioButton)item;
+						return Convert.ToInt32(rbt.Content);
+					}
+				}
+			}
+
+			return 1;
 		}
 	}
 }

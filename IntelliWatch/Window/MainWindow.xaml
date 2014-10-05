@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         x:Class="IntelliWatch.MainWindow"
         Title="智能监控系统"
-        Height="680"
+        Height="700"
         Width="1168"
         Background="{x:Null}"
         WindowStartupLocation="CenterScreen"
@@ -32,7 +32,7 @@
                     <TabControl Margin="-6.496,-27,-6.011,0"
                                 Background="{x:Null}"
                                 BorderBrush="{x:Null}"
-                                SelectionChanged="TabControl_SelectionChanged">
+                                Name="tbcTopLevel1">
                         <TabItem Header="全景视频"
                                  Style="{DynamicResource TabItemStyleSecondLevel}"
                                  Width="90"

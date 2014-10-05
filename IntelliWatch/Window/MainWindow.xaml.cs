@@ -22,6 +22,7 @@ namespace IntelliWatch
 		public MainWindow()
 		{
 			InitializeComponent();
+			tbcTopLevel1.SelectionChanged += TabControl_SelectionChanged;
 			//WindowTest wt = new WindowTest();
 			//wt.ShowDialog();
 		}
