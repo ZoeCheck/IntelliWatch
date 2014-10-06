@@ -116,10 +116,11 @@ namespace IntelliWatch
 
 		private void HideCameraControl()
 		{
+			UCCamera.Visibility = System.Windows.Visibility.Hidden;
+
 			if ((bool)UCCamera.chbShow.IsChecked)
 			{
 				UCCamera.chbShow.IsChecked = false;
-				UCCamera.Visibility = System.Windows.Visibility.Hidden;
 			}
 		}
 
@@ -157,18 +158,15 @@ namespace IntelliWatch
 		private void LayoutRoot_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
 			Point mousePoint = Mouse.GetPosition(LayoutRoot);
+
+			if (mousePoint.X < cameraMinLeft || mousePoint.X > cameraMaxLeft)
 			{
-				if (mousePoint.X < cameraMinLeft || mousePoint.X > cameraMaxLeft)
-				{
-					HideCameraControl();
-				}
+				HideCameraControl();
+			}
 
-				if (mousePoint.Y < cameraMinTop || mousePoint.Y > cameraMaxTop)
-				{
-					UCCamera.Visibility = System.Windows.Visibility.Hidden;
-					HideCameraControl();
-
-				}
+			if (mousePoint.Y < cameraMinTop || mousePoint.Y > cameraMaxTop)
+			{
+				HideCameraControl();
 			}
 		}
 	}

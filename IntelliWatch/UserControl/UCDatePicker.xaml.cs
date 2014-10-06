@@ -54,7 +54,7 @@ namespace IntelliWatch
 			}
 		}
 
-		public int Day { get; set; }
+		public string Day { get; set; }
 
 
 
@@ -113,7 +113,7 @@ namespace IntelliWatch
 
 		void rbt_Checked(object sender, RoutedEventArgs e)
 		{
-			Day = Convert.ToInt32(((RadioButton)sender).Content);
+			Day = ((RadioButton)sender).Content.ToString();
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -162,7 +162,7 @@ namespace IntelliWatch
 			r41.Content = dm.dayModelList[40].Day;
 			r42.Content = dm.dayModelList[41].Day;
 
-			CheckSelected();
+			//CheckSelected();
 		}
 
 		private void btnPreviewYear_Click(object sender, RoutedEventArgs e)
@@ -170,7 +170,7 @@ namespace IntelliWatch
 			Year--;
 			dm.SetDayModel(Year, Month);
 			SetControlShow();
-			//Day = GetDay();
+			SetRadioButtonDayChecked(Day);
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -178,8 +178,8 @@ namespace IntelliWatch
 		{
 			Year++;
 			dm.SetDayModel(Year, Month);
-			//Day = GetDay();
 			SetControlShow();
+			SetRadioButtonDayChecked(Day);
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -187,8 +187,8 @@ namespace IntelliWatch
 		{
 			Month--;
 			dm.SetDayModel(Year, Month);
-			//Day = GetDay();
 			SetControlShow();
+			SetRadioButtonDayChecked(Day);
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -196,8 +196,8 @@ namespace IntelliWatch
 		{
 			Month++;
 			dm.SetDayModel(Year, Month);
-			//Day = GetDay();
 			SetControlShow();
+			SetRadioButtonDayChecked(Day);
 			SelectDate = string.Format("{0}-{1}-{2}", Year, Month, Day);
 		}
 
@@ -229,21 +229,19 @@ namespace IntelliWatch
 			}
 		}
 
-		private int GetDay()
+		private void SetRadioButtonDayChecked(string day)
 		{
 			foreach (var item in GridRadio.Children)
 			{
 				if (item.GetType() == typeof(RadioButton))
 				{
-					if (((RadioButton)item).IsChecked == true)
+					RadioButton rbt = (RadioButton)item;
+					if (rbt.Content.ToString() == day)
 					{
-						RadioButton rbt = (RadioButton)item;
-						return Convert.ToInt32(rbt.Content);
+						rbt.IsChecked = true;
 					}
 				}
 			}
-
-			return 1;
 		}
 	}
 }

@@ -12,6 +12,12 @@
              MinHeight="80">
     <UserControl.Resources>
         <converter:BoolToVisibility x:Key="btv" />
+        <Storyboard x:Key="StoryboardDownLoading" RepeatBehavior="Forever">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="path">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="360"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot"
           VerticalAlignment="Bottom">
@@ -74,6 +80,17 @@
                   VerticalAlignment="Bottom"
                   Width="28"
                   Style="{DynamicResource CheckBoxStyleDownLoad}"
-                  Name="chbDownLoad" />
+                  Name="chbDownLoad"
+                  Unchecked="chbDownLoad_Unchecked" />
+        <Path x:Name="path" Grid.Column="2" Data="M18,9.5009996 C18,14.195972 14.19442,18.001999 9.5,18.001999 4.8055796,18.001999 1,14.195972 1,9.5009996 1,4.8060272 4.8055796,1 9.5,1 12.586318,1 15.288451,2.645089 16.777552,5.1063236 M18.289018,2.5935134 L17.260487,6.4590177 13.394982,5.4304866" Height="19.002" Margin="5.158,0,3.553,4.01" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" >
+        	<Path.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Path.RenderTransform>
+        </Path>
     </Grid>
 </UserControl>

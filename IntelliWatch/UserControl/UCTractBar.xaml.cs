@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using System.Windows.Media.Animation;
+using System.Timers;
 
 namespace IntelliWatch
 {
@@ -19,6 +21,9 @@ namespace IntelliWatch
 	/// </summary>
 	public partial class UCTractBar : UserControl, INotifyPropertyChanged
 	{
+		Storyboard sbDownLoading;
+		Timer timerStopAni;
+
 		public double CutLeft
 		{
 			get { return (double)GetValue(LeftProperty); }
@@ -47,6 +52,19 @@ namespace IntelliWatch
 		{
 			this.InitializeComponent();
 			this.DataContext = this;
+			sbDownLoading = this.FindResource("StoryboardDownLoading") as Storyboard;
+			timerStopAni = new Timer();
+			timerStopAni.Interval = 5000;
+			timerStopAni.Elapsed += new ElapsedEventHandler(timerStopAni_Elapsed);
+		}
+
+		void timerStopAni_Elapsed(object sender, ElapsedEventArgs e)
+		{
+			timerStopAni.Stop();
+			this.Dispatcher.Invoke(new Action(() =>
+			{
+				StopDownloadAnimation();
+			}));
 		}
 
 		private void CanvasCut_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -90,6 +108,25 @@ namespace IntelliWatch
 			//this.Cursor = System.Windows.Input.Cursors.Arrow;
 		}
 
+		private void PlayDownloadAnimation()
+		{
+			path.Visibility = System.Windows.Visibility.Visible;
+			if (sbDownLoading != null)
+			{
+				sbDownLoading.Begin();
+			}
+		}
+
+		private void StopDownloadAnimation()
+		{
+			chbDownLoad.Visibility = System.Windows.Visibility.Visible;
+			path.Visibility = System.Windows.Visibility.Hidden;
+			if (sbDownLoading != null)
+			{
+				sbDownLoading.Stop();
+			}
+		}
+
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		public void RaisePropertyChanged(string propertyName)
@@ -98,6 +135,13 @@ namespace IntelliWatch
 			{
 				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+
+		private void chbDownLoad_Unchecked(object sender, RoutedEventArgs e)
+		{
+			chbDownLoad.Visibility = System.Windows.Visibility.Hidden;
+			PlayDownloadAnimation();
+			timerStopAni.Start();
 		}
 	}
 }

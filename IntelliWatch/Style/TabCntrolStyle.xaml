@@ -100,7 +100,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TabItem}">
 					<Grid x:Name="grid" SnapsToDevicePixels="true" Opacity="0.5">
-						<Rectangle x:Name="rectangle" Fill="#FF036AC6" HorizontalAlignment="Right" Margin="0,-0.867,-2.859,-1.516" Stroke="#FF036AC6" StrokeThickness="1" Width="3.567" Visibility="Hidden"/>
+						<Rectangle x:Name="rectangle" Fill="{DynamicResource BrushMainWindow}" HorizontalAlignment="Right" Margin="0,-0.867,-2.859,-1.516" Stroke="{DynamicResource BrushMainWindow}" StrokeThickness="1" Width="3.567" Visibility="Hidden"/>
 						<Path x:Name="path" Data="M61.117242,56.450337 C60.979677,54.597655 59.268052,53.410584 57.968387,53.5 L13.833333,53.5 0.5,40.916667 0.5,2.4227574 C0.69680348,1.1425151 1.5519748,0.51630241 3.0210999,0.5 L58.65625,0.5 C59.335225,0.32965473 60.927897,-0.27815556 61.00546,-1.5426769" Stretch="Fill" Stroke="Transparent" Margin="0,-2.042,-1.609,-2.938" Visibility="Visible" Fill="#00CAD9E9" StrokeThickness="2"/>
 						<StackPanel x:Name="stackPanel" Margin="0,0,0,4" Orientation="Vertical" d:LayoutOverrides="Height" HorizontalAlignment="Center" VerticalAlignment="Center">
 							<Grid Margin="0" Height="24" Width="24" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -199,7 +199,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TabItem}">
 					<Grid x:Name="grid" SnapsToDevicePixels="true" Opacity="0.5">
-						<Rectangle x:Name="rectangle" Fill="#FF036AC6" HorizontalAlignment="Right" Margin="0,-0.867,-1.604,-1.516" Stroke="{DynamicResource BrushMainWindow}" StrokeThickness="0" Width="2.312" Visibility="Hidden"/>
+						<Rectangle x:Name="rectangle" Fill="{DynamicResource BrushMainWindow}" HorizontalAlignment="Right" Margin="0,-0.867,-1.604,-1.516" Stroke="{DynamicResource BrushMainWindow}" StrokeThickness="0" Width="2.312" Visibility="Hidden"/>
 						<Path x:Name="path" Data="M61.117242,56.450337 C60.979677,54.597655 59.268052,53.410584 57.968387,53.5 L13.833333,53.5 0.5,40.916667 0.5,2.6984057 C0.75898555,1.188855 1.6710133,0.47453303 3.1905856,0.5 L58.65625,0.5 C59.335225,0.32965473 60.927897,-0.27815556 61.00546,-1.5426769" Stretch="Fill" Stroke="#00000000" Margin="0,-2.042,-1.609,-2.938" Visibility="Visible" Fill="#00CAD9E9" StrokeThickness="2"/>
 						<StackPanel x:Name="stackPanel" Margin="0,0,0,4" Orientation="Vertical" d:LayoutOverrides="Height" HorizontalAlignment="Center" VerticalAlignment="Center">
 							<Grid Margin="0" Height="24" Width="24" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -297,7 +297,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TabItem}">
 					<Grid x:Name="grid" SnapsToDevicePixels="true" Opacity="0.5">
-						<Rectangle x:Name="rectangle" Fill="#FF036AC6" HorizontalAlignment="Right" Margin="0,-0.867,-1.604,-1.516" Stroke="{DynamicResource BrushMainWindow}" StrokeThickness="0" Width="2.312" Visibility="Hidden"/>
+						<Rectangle x:Name="rectangle" Fill="{DynamicResource BrushMainWindow}" HorizontalAlignment="Right" Margin="0,-0.867,-1.604,-1.516" Stroke="{DynamicResource BrushMainWindow}" StrokeThickness="0" Width="2.312" Visibility="Hidden"/>
 						<Path x:Name="path" Data="M61.117242,56.450337 C60.979677,54.597655 59.268052,53.410584 57.968387,53.5 L13.833333,53.5 0.5,40.916667 0.5,3.5465543 C0.64767258,1.4714001 1.9700407,0.51845542 4.271057,0.5 L58.65625,0.5 C59.335225,0.32965473 60.927897,-0.27815556 61.00546,-1.5426769" Stretch="Fill" Stroke="Transparent" Margin="0,-2.042,-1.609,-2.938" Visibility="Visible" Fill="#00CAD9E9" StrokeThickness="2"/>
 						<StackPanel x:Name="stackPanel" Margin="0,0,0,4" Orientation="Vertical" d:LayoutOverrides="Height" HorizontalAlignment="Center" VerticalAlignment="Center">
 							<Grid Margin="0" Height="24" Width="24" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -391,8 +391,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TabItem}">
 					<Grid SnapsToDevicePixels="true">
-						<Path x:Name="path" Data="M0.5,21.336667 L0.5,3.0624999 C0.60265336,1.5209846 1.6143149,0.69157921 3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 73.648906,21.242842" Fill="Transparent" Margin="0,0,-9.125,0.002" Stretch="Fill" Stroke="#FF82B3E7" StrokeThickness="1" Visibility="Visible"/>
-						<Path x:Name="path_Copy" Data="M3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 72.868631,19.758701" Fill="Transparent" Margin="3.941,0,-8.766,0.61" Stretch="Fill" StrokeThickness="1" Visibility="Visible" Stroke="#FF82B3E7"/>
+						<Path x:Name="path" Data="M0.5,21.336667 L0.5,3.0624999 C0.60265336,1.5209846 1.6143149,0.69157921 3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 72.689915,19.840445" Fill="Transparent" Margin="0,0,-7.84,0.002" Stretch="Fill" Stroke="#FF82B3E7" StrokeThickness="1" Visibility="Visible"/>
+						<Path x:Name="path_Copy" Data="M3.4374999,0.5 L57.704974,0.5 C59.326364,0.63930845 60.556097,1.2319455 61.458134,2.2037283 L62.726667,3.6249999 72.190299,18.843439" Fill="Transparent" Margin="3.941,0,-7.85,1.737" Stretch="Fill" StrokeThickness="1" Visibility="Visible" Stroke="#FF82B3E7"/>
 						<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Padding="{TemplateBinding Padding}">
 							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>

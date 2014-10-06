@@ -195,7 +195,6 @@
         						Margin="0"
         						SelectedItemChanged="TreeView_SelectedItemChanged" BorderThickness="0" d:LayoutOverrides="Height">
         						<TreeViewItem Header="新北区"
-        							IsExpanded="True"
         							Style="{DynamicResource TreeViewItemStyleMain}"
         							Foreground="White" Margin="0,2">
         							<TreeViewItem Header="长江路黄河西路"
@@ -237,7 +236,6 @@
         						</TreeViewItem>
         						<TreeViewItem Header="钟楼区"
         							Style="{DynamicResource TreeViewItemStyleMain}"
-        							IsExpanded="True"
         							Foreground="White" Margin="0,2">
         							<TreeViewItem Header="区政府钟楼广场"
         								Style="{DynamicResource TreeViewItemStyleSecond}"
@@ -270,7 +268,6 @@
         						</TreeViewItem>
         						<TreeViewItem Header="武进区"
         							Style="{DynamicResource TreeViewItemStyleLastItem}"
-        							IsExpanded="True"
         							Foreground="White" Margin="0,2">
         							<TreeViewItem Header="中吴大道南洋大桥"
         								Style="{DynamicResource TreeViewItemStyleSecond}"
@@ -385,7 +382,6 @@
         						</TreeViewItem>
         						<TreeViewItem Header="武进区"
         							Style="{DynamicResource TreeViewItemStyleLastItem}"
-        							IsExpanded="True"
         							Foreground="White" Margin="0,2">
         							<TreeViewItem Header="中吴大道南洋大桥"
         								Style="{DynamicResource TreeViewItemStyleSecond}"
