@@ -13,13 +13,58 @@
         Icon="/IntelliWatch;component/Image/MainIco.ico">
     <Grid x:Name="LayoutRoot"
           Background="{DynamicResource BrushMainWindow}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="215.812"/>
+    		<RowDefinition/>
+    		<RowDefinition Height="198.107"/>
+    	</Grid.RowDefinitions>
+        <Path Data="M0,0 L284.667,0 L284.667,54 L0,54 z" Fill="#33F4F4F5" Height="30" Margin="58,27.666,0,0" Stretch="Fill" VerticalAlignment="Top">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M0,0 L284.667,0 L284.667,54 L0,54 z" Fill="#33F4F4F5" Height="30" Margin="48,0,10,2" Grid.Row="2" Stretch="Fill" VerticalAlignment="Bottom">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M272,136 C272,211.11073 211.11073,272 136,272 C60.889274,272 0,211.11073 0,136 C0,60.889274 60.889274,0 136,0 C211.11073,0 272,60.889274 272,136 z" Fill="#33F4F4F5" HorizontalAlignment="Right" Margin="0,32.188,288,-56.107" Grid.Row="1" Stretch="Fill" Width="272">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M112,56 C112,86.927946 86.927946,112 56,112 C25.072054,112 0,86.927946 0,56 C0,25.072054 25.072054,0 56,0 C86.927946,0 112,25.072054 112,56 z" Fill="#33F4F4F5" HorizontalAlignment="Right" Margin="0,88,288,15.812" Stretch="Fill" Width="112">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M89.176471,-71.294118 C189.88269,-31.294109 197.88271,0.70590052 216.00058,47.999915 229.88261,144.70594 15.999369,592.00005 128,376 240.00063,159.99995 15.999926,418.66668 -40.000111,440.00002 -125.59205,348.80174 -100.54145,183.84362 89.176471,-71.294118 z" Fill="#33F4F4F5" HorizontalAlignment="Left" Margin="179.21,56,0,94.706" Stretch="Fill" Width="303.559" Grid.RowSpan="3">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M135.41305,233.31961 C135.41305,308.43033 47.667891,300.87575 122.77427,301.68401 135.41327,301.82002 232.24234,274.8686 207.8742,251.81018 181.67641,227.02044 159.49527,151.47281 159.49527,112.55857 159.49527,37.447843 106.90367,31.985798 182.01439,31.985798 223.66396,31.985798 188.11945,99.222701 213.0665,128.7103 233.1089,152.40056 135.41305,199.85845 135.41305,233.31961 z" Fill="#33F4F4F5" HorizontalAlignment="Right" Margin="0,6.666,15.636,-60.553" Stretch="Fill" Width="123.395">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M230.15406,57.622853 C230.15406,79.306228 168.15764,129.53507 155.15458,144.87341 139.01262,163.91439 121.68659,100.8403 94.768911,100.8403 46.167853,100.8403 8.9787314,159.40189 8.9787314,110.80084 8.9787314,83.225164 21.662414,58.611923 41.514055,42.476839 56.650164,30.174461 143.12832,43.217408 164.15371,43.217408 212.75477,43.217408 230.15406,9.0217947 230.15406,57.622853 z" Fill="#33F4F4F5" HorizontalAlignment="Left" Margin="232,16,0,0" Stretch="Fill" Width="96" Height="40" VerticalAlignment="Top">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
+        <Path Data="M120,60 C120,73.759975 95.78967,69.877849 88,80 77.03041,94.254244 51.37711,120 32,120 13.183291,120 35.000734,77.553951 24,64 15.627939,53.684823 0,74.320376 0,60 0,43.431458 29.142136,26.857864 40,16 50.857864,5.1421356 43.431458,0 60,0 73.296718,0 86.053935,24.679666 96,32 110.84077,42.922854 120,40.159633&#xd;&#xa;120,60 z" Fill="#33F4F4F5" HorizontalAlignment="Left" Margin="32,31.666,0,38.812" Stretch="Fill" Width="168.667">
+        	<Path.Effect>
+        		<BlurEffect Radius="100"/>
+        	</Path.Effect>
+        </Path>
         <TabControl x:Name="tbcMain"
                     Margin="0,0,10,10"
                     TabStripPlacement="Left"
                     Style="{DynamicResource TabControlStyleTopLevel}"
                     BorderThickness="0"
                     Padding="2"
-                    Background="White">
+                    Background="White" Grid.RowSpan="3">
             <TabItem Header="所有视频"
                      Style="{DynamicResource TabItemStyleTopLevel1}"
                      Width="60"
@@ -32,7 +77,7 @@
                     <TabControl Margin="-6.496,-27,-6.011,0"
                                 Background="{x:Null}"
                                 BorderBrush="{x:Null}"
-                                Name="tbcTopLevel1">
+                                x:Name="tbcTopLevel1">
                         <TabItem Header="全景视频"
                                  Style="{DynamicResource TabItemStyleSecondLevel}"
                                  Width="90"
