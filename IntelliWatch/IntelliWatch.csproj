@@ -230,6 +230,7 @@
     <Content Include="Image\4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="截图\QQ图片20140925102244.jpg" />
     <Resource Include="截图\1.png" />
     <Resource Include="截图\10.png" />
     <Resource Include="截图\11.png" />

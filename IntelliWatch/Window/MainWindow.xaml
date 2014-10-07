@@ -121,8 +121,31 @@
                      Style="{DynamicResource TabItemStyleTopLevel2}"
                      BorderBrush="{x:Null}"
                      Foreground="White">
-                <Grid Background="#FF393939"
-                      Margin="10" />
+                <Grid >
+                	<TabControl Margin="-6.496,-27,-6.011,0"
+                		Background="{x:Null}"
+                		BorderBrush="{x:Null}"
+                		x:Name="tbcTopLevel1_Copy"
+                                SelectionChanged="TabControl_SelectionChanged">
+                		<TabItem Header="全景视频"
+                			Style="{DynamicResource TabItemStyleSecondLevel}"
+                			Width="90"
+                			Margin="0.672,-2,-0.673,-1" Foreground="White">
+                			<Grid>
+                				<local:UCRT1 Margin="0"
+                					d:LayoutOverrides="Height" />
+                			</Grid>
+                		</TabItem>
+                		<TabItem Header="特殊地区"
+                			Width="90"
+                			Margin="-15.077,-2,15.076,-1"
+                			Style="{DynamicResource TabItemStyleSecondLevel2}" Foreground="White">
+                			<Grid>
+                				<local:UCRT2 Margin="0"/>
+                			</Grid>
+                		</TabItem>
+                	</TabControl>
+                </Grid>
             </TabItem>
             <TabItem Header="历史回播"
                      Width="60"
@@ -130,8 +153,33 @@
                      Style="{DynamicResource TabItemStyleTopLevel3}"
                      BorderBrush="{x:Null}"
                      Foreground="White">
-                <Grid Background="#FF393939"
-                      Margin="10" />
+                <Grid
+                      Margin="0" >
+                	<TabControl Margin="-6.496,-27,-6.011,0"
+                		Background="{x:Null}"
+                		BorderBrush="{x:Null}"
+                		x:Name="tbcTopLevel1_Copy1"
+                                SelectionChanged="TabControl_SelectionChanged">
+                		<TabItem Header="全景视频"
+                			Style="{DynamicResource TabItemStyleSecondLevel}"
+                			Width="90"
+                			Margin="0.672,-2,-0.673,-1" Foreground="White">
+                			<Grid>
+                				<local:UCRT1 Margin="0"
+                					d:LayoutOverrides="Height" />
+                			</Grid>
+                		</TabItem>
+                		<TabItem Header="局部线路"
+                			Width="90"
+                			Margin="-15.077,-2,0,-1"
+                			HorizontalAlignment="Left"
+                			Style="{DynamicResource TabItemStyleSecondLevel2}" Foreground="White">
+                			<Grid >
+                				<local:UCRT2 Margin="0"/>
+                			</Grid>
+                		</TabItem>
+                	</TabControl>
+                </Grid>
             </TabItem>
         </TabControl>
         <Button Content="Button"
